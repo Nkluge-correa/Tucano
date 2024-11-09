@@ -1,0 +1,36 @@
+group:
+  - legal_benchmark
+task: datalawyer_frases
+dataset_path: eduagarcia/cnj_benchmarks
+dataset_name: datalawyer-frases-v0_4
+output_type: generate_until
+fewshot_split: train
+fewshot_config:
+  sampler: first_n
+test_split: test
+limit: 2000
+num_fewshot: 15
+description: "Abaixo contém frases extraidas de documentos jurídicos, seu trabalho é classificá-las em um dos seguintes tópicos:\
+  \ 'Argumentação', 'Decisão', 'Definição', 'Exposição', 'Pedido', 'Qualificação', 'Referência' ou 'Vebertação', se não pertencer a nenhuma das anteriores\
+  \ classficar como 'Sem Classe'.\n\n"
+doc_to_text: "Frase: {{sentence}}\nA classificação da frase é:"
+doc_to_target: !function util.doc_to_target
+generation_kwargs:
+  max_gen_toks: 32
+  do_sample: false
+  temperature: 0.0
+filter_list:
+  - name: find_similar_label
+    filter:
+      - function: find_similar_label
+        labels: ['Argumentação', 'Decisão', 'Definição', 'Exposição', 'Pedido', 'Qualificação', 'Referência', 'Sem Classe', 'Vebertação']
+      - function: take_first
+metric_list:
+  - metric: f1_macro
+    aggregation: f1_macro
+    higher_is_better: true
+  - metric: acc
+    aggregation: acc
+    higher_is_better: true
+metadata:
+  version: 1.2

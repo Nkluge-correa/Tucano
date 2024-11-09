@@ -1,0 +1,42 @@
+group:
+  - pt_benchmark
+  - assin2
+task: assin2_sts
+dataset_path: assin2
+output_type: generate_until
+fewshot_split: train
+fewshot_config:
+  sampler: id_sampler
+  sampler_config:
+    # Same as assin2_rte
+    id_list: [1, 3251, 2, 3252, 3, 4, 5, 6, 3253, 7, 3254, 3255, 3256, 8, 9, 10, 3257, 11, 3258, 12, 13, 14, 15, 3259, 3260, 3261, 3262, 3263, 16, 17, 3264, 18, 3265, 3266, 3267, 19, 20, 3268, 3269, 21, 3270, 3271, 22, 3272, 3273, 23, 3274, 24, 25, 3275]
+    id_column: sentence_pair_id
+test_split: test
+num_fewshot: 15
+description: "Abaixo contém pares de frases, para cada par você deve julgar o grau de similaridade\
+  \ de 0,0 a 5,0, escreva apenas o número.\n\n"
+doc_to_text: "Frase 1: {{premise}}\nFrase 2: {{hypothesis}}\nQual o grau de similaridade das duas frases de 0,0 a 5,0? Resposta:"
+doc_to_target: !function util.assin2_float_to_pt_str
+generation_kwargs:
+  max_gen_toks: 32
+  do_sample: false
+  temperature: 0.0
+filter_list:
+  - name: number_filter
+    filter:
+      - function: number_filter
+        type: float
+        range_min: 0.0
+        range_max: 5.0
+        on_outside_range: "clip"
+        fallback: 0.0
+      - function: take_first
+metric_list:
+  - metric: pearson
+    aggregation: pearsonr
+    higher_is_better: true
+  - metric: mse
+    aggregation: mean_squared_error
+    higher_is_better: false
+metadata:
+  version: 1.0

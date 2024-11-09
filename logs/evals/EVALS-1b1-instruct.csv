@@ -1,0 +1,3 @@
+model,average,calame_pt,lambada_pt,enem,bluex,oab_exams,assin2_rte,assin2_sts,faquad_nli,hatebr,hatespeech_pt,tweet_br,arc_pt,hellaswag_pt,truthfulqa
+Tucano-1b1-sft,33.66,56.74,34.66,21.06,24.61,26.20,33.42,0.87,43.97,33.33,41.23,40.65,30.60,42.83,41.17
+Tucano-1b1-dpo,35.44,56.55,35.53,21.06,26.01,26.47,67.78,8.88,43.97,31.28,41.23,22.03,30.77,43.50,41.14

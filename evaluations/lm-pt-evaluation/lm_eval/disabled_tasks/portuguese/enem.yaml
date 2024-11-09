@@ -1,0 +1,45 @@
+group:
+  - pt_benchmark
+dataset_path: eduagarcia/enem_challenge
+task: enem_challenge
+test_split: train
+fewshot_split: train
+fewshot_config:
+  sampler: id_sampler
+  sampler_config:
+    # Few-shots from https://github.com/piresramon/gpt-4-enem/blob/main/lm_eval/tasks/enem.py
+    id_list: ["2022_21", "2022_88", "2022_143"]
+    id_column: id
+    exclude_from_task: true
+num_fewshot: 3
+description: "As perguntas a seguir são questões de multipla escolha do Exame Nacional\
+  \ do Ensino Médio (ENEM), reponda apenas com as letras A, B, C, D ou E.\n\n"
+output_type: generate_until
+doc_to_text: !function util.enem_doc_to_text
+doc_to_target: "{{answerKey}}"
+should_decontaminate: true
+doc_to_decontamination_query: !function util.enem_doc_to_text
+generation_kwargs:
+  max_gen_toks: 32
+  do_sample: false
+  temperature: 0.0
+filter_list:
+  - name: find_choices
+    filter:
+      - function: normalize_spaces
+      - function: remove_accents
+      - function: find_choices
+        choices: ["A", "B", "C", "D", "E"]
+        regex_patterns: 
+          - "(?:[Ll]etra|[Aa]lternativa|[Rr]esposta|[Rr]esposta [Cc]orreta|[Rr]esposta[Cc]orreta e|[Oo]pcao):? ([ABCDE])\\b"
+          - "\\b([ABCDE])\\."          
+          - "\\b([ABCDE]) ?[.):-]"
+          - "\\b([ABCDE])$"
+          - "\\b([ABCDE])\\b"
+      - function: take_first
+metric_list:
+  - metric: acc
+    aggregation: acc
+    higher_is_better: true
+metadata:
+  version: 1.0

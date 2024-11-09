@@ -1,0 +1,16 @@
+torch
+torchvision
+torchaudio
+numpy
+transformers
+huggingface_hub
+datasets
+sentencepiece
+accelerate
+wheel
+flash-attn
+liger-kernel
+codecarbon
+wandb
+pyyaml
+trl

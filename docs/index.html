@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Tucano is a series of natively pre-trained open-source Portuguese language models.">
+  <meta property="og:title" content="Tucano"/>
+  <meta property="og:description" content="Tucano is a series of natively pre-trained open-source Portuguese language models."/>
+  <meta property="og:url" content="https://github.com/Nkluge-correa/Tucano"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/banner.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="600"/>
+
+
+  <meta name="twitter:title" content="Tucano">
+  <meta name="twitter:description" content="Tucano is a series of natively pre-trained open-source Portuguese language models.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/banner.jpg">
+  <meta name="twitter:card" content="Tucano is a series of natively pre-trained open-source Portuguese language models.">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="artificial intelligence, machine learning, language models, portuguse, llm">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Enable LaTeX code use-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <title>Tucano</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Tucano: Advancing Neural Text Generation for Portuguese</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://nkluge-correa.github.io/" target="_blank">Nicholas Kluge Corrêa</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/aniket-sen-53916b41/" target="_blank">Aniket Sen</a><sup>2,3</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://sophia-falk.github.io/" target="_blank">Sophia Falk</a><sup>3</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.linkedin.com/in/shizafatimah/" target="_blank">Shiza Fatimah</a><sup>4</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <br>
+                    <span class="author-block">University of Bonn</span>
+                    <span class="eql-cntrb"><small><br><sup>1</sup>Center for Science and Thought</small></span>
+                    <span class="eql-cntrb"><small><br><sup>2</sup>High Performance Computing and Analytics Lab</small></span>
+                    <span class="eql-cntrb"><small><br><sup>3</sup>Helmholtz-Institut für Strahlen- und Kernphysik</small></span>
+                    <span class="eql-cntrb"><small><br><sup>4</sup>Institute for Science and Ethics</small></span>
+                    <span class="eql-cntrb"><small><br><sup>5</sup>Institute for Computer Science</small></span>
+                  </div>
+
+                      <!-- 
+                      <span class="link-block">
+                        <a href="place_holder" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    Publication links -->
+                    
+                    <!-- ArXiv link -->
+                    <br>
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/Nkluge-correa/Tucano" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Hugging Face -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/TucanoBR" target="_blank"
+                  class="exPERternal-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-tools"></i>
+                  </span>
+                  <span>Hugging Face</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Tucano is a series of natively pre-trained open-source Portuguese language models. We release them under the permissive Apache 2.0 license on <a href="https://github.com/Nkluge-correa/Tucano" target="_blank">GitHub</a> and <a href="https://huggingface.co/TucanoBR" target="_blank">Hugging Face</a> for community use and further development. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Significant advances have been made in natural language processing in recent years. However, our current deep 
+            learning paradigm requires substantial resources in terms of data and computation. This inevitably causes a 
+            schism between languages, separating those considered high-resource, where most of the development is currently 
+            made, and the low-resource ones, which strive to attain the same level of performance and autonomy. This study 
+            aims to introduce a new set of resources to stimulate the future development of neural text generation in 
+            Portuguese. In this work, we document the development of <i>GigaVerbo</i>, a concatenation of deduplicated 
+            Portuguese text corpora amounting to 200 billion tokens. Via this corpus, we trained a series of 
+            decoder-transformers based on the Llama 2 architecture, named <i>Tucano</i>. Our models perform equal or 
+            superior to other Portuguese and multilingual language models of similar size in several Portuguese benchmarks. 
+            The evaluation of our models also reveals that model performance on many currently available benchmarks used 
+            by the Portuguese NLP community has <i>little to no correlation</i> with the scaling of token ingestion during 
+            training. All derivatives of our study, including the source code used for training and evaluation, are openly 
+            released on GitHub and Hugging Face.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper Intro -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <div class="level-set has-text-justified">
+            <p>
+            Our study brings the following advancements to the Portuguese NLP community:
+            <ol>
+              <li>The concatenation of a larger and more <strong>high-quality dataset for Portuguese</strong> language modeling (<a href="https://huggingface.co/datasets/TucanoBR/GigaVerbo" target="_blank"><strong>GigaVerbo</strong></a>).</li>
+              <li>The development of <strong>learned filters and datasets</strong> to improve text pre-processing for Portuguese.</li>
+              <li>Pushing self-supervised pretraining beyond the <strong>500 billion tokens</strong> mark for Portuguese monolingual models.</li>
+              <li>The development of new, low-resource, efficient, and effective <strong>open-source language models for Portuguese</strong> (<a href="https://huggingface.co/collections/TucanoBR/tucano-670565e8c5325fb7f2da4361" target="_blank"><strong>Tucano</strong></a>).</li>
+              <li>A critical assessment and comparison of currently available <strong>benchmarks for Portuguese language models</strong>.</li>
+          </ol>
+          </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Related Works -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">An Anthology of Portuguese LLM Development</h2>
+          <div class="level-set has-text-justified">
+            <p>
+              Our study provides a historical overview of Portuguese LLM development from <strong>2020 to October 2024</strong>, allowing readers to better contextualize our and past works.
+            </p>
+            <img src="static/images/timeline.png" alt="This image illustrates several Portuguese language model releases from 2020 to June 2024." class="blend-img-background center-image"/>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GigaVerbo -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">GigaVerbo</h2>
+          <div class="level-set has-text-justified">
+            <p>
+              GigaVerbo contains over <strong>145 million documents</strong>, amounting to <strong>780 GB of text</strong>. Much like other text datasets, Gigaverbo was formed by concatenating several portions of openly available datasets for Portuguese and deduplicating their summation.
+              <br><br>
+              Our dataset is composed of the following subsets:
+            </p>
+            <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+              <thead>
+                  <tr>
+                      <th><strong>Subset</strong></th>
+                      <th><strong>Nº of Samples</strong></th>
+                      <th><strong>%</strong></th>
+                      <th><strong>Description</strong></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><strong>monoHPLT-PT</strong></td>
+                      <td>58,244,012</td>
+                      <td>40.09%</td>
+                      <td>The clean and deduplicated Portuguese portion of the High-Performance Language Technologies resources dataset.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>CrawlPT</strong></td>
+                      <td>43,846,974</td>
+                      <td>30.17%</td>
+                      <td>A deduplicated Portuguese corpus extracted from various web pages, concatenated from CC-100, Oscar, and BrWaC.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Multilingual-C4</strong></td>
+                      <td>16,092,571</td>
+                      <td>11.07%</td>
+                      <td>The Brazilian Portuguese cleaned portion of the m-C4 dataset.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Common Crawl</strong></td>
+                      <td>12,470,998</td>
+                      <td>8.58%</td>
+                      <td>A clean and deduplicated snapshot of the Common Crawl dataset (CC-MAIN-2023-23).</td>
+                  </tr>
+                  <tr>
+                      <td><strong>BlogSet-BR</strong></td>
+                      <td>4,321,181</td>
+                      <td>2.97%</td>
+                      <td>A collection of blog posts written in Brazilian Portuguese.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Instruct-PTBR</strong></td>
+                      <td>2,962,856</td>
+                      <td>2.04%</td>
+                      <td>A mix of multiple instruction datasets for various tasks, machine-translated from English to Brazilian Portuguese.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Corpus Carolina</strong></td>
+                      <td>2,075,395</td>
+                      <td>1.43%</td>
+                      <td>An open corpus with varied typology in contemporary Brazilian Portuguese.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>UltrachatBR</strong></td>
+                      <td>1,255,091</td>
+                      <td>0.86%</td>
+                      <td>A Portuguese version (machine-translated) of the Ultrachat dataset.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Wikipedia</strong></td>
+                      <td>1,101,475</td>
+                      <td>0.76%</td>
+                      <td>Cleaned Portuguese articles built from the Wikipedia dumps.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>CulturaX</strong></td>
+                      <td>999,994</td>
+                      <td>0.69%</td>
+                      <td>The Portuguese portion of CulturaX, a multilingual dataset with 167 languages.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>LegalPT</strong></td>
+                      <td>925,522</td>
+                      <td>0.64%</td>
+                      <td>A concatenation of publicly available legal data in Portuguese, including legislation, jurisprudence, and legal articles.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Gpt4All</strong></td>
+                      <td>808,803</td>
+                      <td>0.56%</td>
+                      <td>A Portuguese (machine-translated) version of the Gpt4All dataset.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Bactrian-X</strong></td>
+                      <td>66,994</td>
+                      <td>< 0.1%</td>
+                      <td>The Portuguese portion of Bactrian-X, a collection of instruction-response pairs in 52 languages.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>XL-Sum</strong></td>
+                      <td>64,577</td>
+                      <td>< 0.1%</td>
+                      <td>A Portuguese (machine-translated) version of XL-Sum, a diverse dataset for abstractive summarization.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Dolly 15K</strong></td>
+                      <td>28,401</td>
+                      <td>< 0.1%</td>
+                      <td>A Portuguese (machine-translated) version of Dolly 15K, an open-source dataset of instruction-following records generated by human annotators.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>CosmosQA</strong></td>
+                      <td>25,260</td>
+                      <td>< 0.1%</td>
+                      <td>A Portuguese (machine-translated) version of the CosmosQA dataset for commonsense-based reading comprehension.</td>
+                  </tr>
+                  <tr>
+                      <td><strong>ROOTS</strong></td>
+                      <td>10,740</td>
+                      <td>< 0.1%</td>
+                      <td>The Portuguese portion of the ROOTS corpus, a dataset spanning 59 languages.</td>
+                  </tr>
+              </tbody>
+          </table>
+          
+          <p style="margin-top: 10px; text-align: center;">GigaVerbo is currently hosted on <a href="https://huggingface.co/datasets/TucanoBR/GigaVerbo" target="_blank">Hugging Face</a>. More information can be found in its dataset card.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GigaVerbo Text-Filter -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">GigaVerbo Text-Filter</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                With the help of <strong>GPT-4o</strong>, we scored over <strong>100,000 samples of GigaVerbo in terms of their overall quality</strong>. With these scored samples dataset, we trained classifiers to help us filter GigaVerbo from low-quality samples (our text-quality dataset is also available in <a href="https://huggingface.co/datasets/TucanoBR/GigaVerbo-Text-Filter" target="_blank">Hugging Face</a>).
+              </p>
+
+              <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><strong>Class</strong></th>
+                        <th><strong>Precision</strong></th>
+                        <th><strong>Recall</strong></th>
+                        <th><strong>F1-score</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LaBSE + XGBoost</strong></td>
+                        <td>Low</td>
+                        <td>0.89</td>
+                        <td>0.81</td>
+                        <td>0.85</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>High</td>
+                        <td>0.92</td>
+                        <td>0.96</td>
+                        <td>0.94</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BERTimbau</strong></td>
+                        <td>Low</td>
+                        <td><b>0.99</b></td>
+                        <td><b>0.97</b></td>
+                        <td><b>0.98</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>High</td>
+                        <td><b>0.99</b></td>
+                        <td><b>0.99</b></td>
+                        <td><b>0.99</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 10px; text-align: center;">The table above shows the evaluation scores for both our LaBSE + XGBoost and BERTimbau-based classifiers. All these models are available on <a href="https://huggingface.co/TucanoBR" target="_blank">Hugging Face</a>.</p>
+            
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tucano -->
+    <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Tucano</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                Like many other studies, we used a decoder-only Transformer based on the Llama architecture as the basis for our models. For convenience, 
+                we eventually refer to these models as Tucano <i>small</i>, <i>medium</i>, <i>large</i>, and <i>XL</i>, 
+                which respectively correspond to the <strong><a href="https://huggingface.co/TucanoBR/Tucano-160m" target="_blank">160m</a></strong>, 
+              <strong><a href="https://huggingface.co/TucanoBR/Tucano-630m" target="_blank">630m</a></strong>, 
+            <strong><a href="https://huggingface.co/TucanoBR/Tucano-1b1" target="_blank">1b1</a></strong>, and 
+          <strong><a href="https://huggingface.co/TucanoBR/Tucano-2b4" target="_blank">2b4</a></strong> models.
+              </p>
+              <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+                <thead>
+                  <tr>
+                      <th><strong>\(n_{param}\)</strong></th>
+                      <th><strong>\(n_{layers}\)</strong></th>
+                      <th><strong>\(d_{model}\)</strong></th>
+                      <th><strong>\(d_{mlp}\)</strong></th>
+                      <th><strong>\(n_{heads}\)</strong></th>
+                      <th><strong>\(n_{KV-heads}\)</strong></th>
+                      <th><strong>\(d_{head}\)</strong></th>
+                      <th><strong>\(c_{length}\)</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>162,417,408</td>
+                        <td>12</td>
+                        <td>768</td>
+                        <td>3,072</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>64</td>
+                        <td>2048</td>
+                    </tr>
+                    <tr>
+                        <td>630,253,568</td>
+                        <td>14</td>
+                        <td>2,048</td>
+                        <td>4,096</td>
+                        <td>16</td>
+                        <td>4</td>
+                        <td>128</td>
+                        <td>2048</td>
+                    </tr>
+                    <tr>
+                        <td>1,100,048,384</td>
+                        <td>22</td>
+                        <td>2,048</td>
+                        <td>5,632</td>
+                        <td>32</td>
+                        <td>4</td>
+                        <td>64</td>
+                        <td>2048</td>
+                    </tr>
+                    <tr>
+                        <td>2,444,618,240</td>
+                        <td>24</td>
+                        <td>2,560</td>
+                        <td>10,240</td>
+                        <td>16</td>
+                        <td>4</td>
+                        <td>160</td>
+                        <td>4096</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 10px; text-align: center;">
+            Each model has a vocabulary size of 32,000. Tucano-160m, 630m, and 1b1 were trained with a context window of 2048 tokens, while the largest model (2b4) was trained with sequences of length 4096. All models uese the <a href="https://nkluge-correa.github.io/TeenyTinyLlama/"  target="_blank">TeenyTinyLlama</a> tokenizer.
+            </p>
+
+            <img src="static/images/loss-perplexity.png" alt="This image illustrates the training loss and perplexity of Tucano models." class="blend-img-background center-image"/>
+            <p style="margin-top: 10px; text-align: center;">All logs from our training runs recorded the loss, evaluation loss, the current value of the learning rate, and the gradient norm for that specific optimization step. These are all available on <a href="https://github.com/Nkluge-correa/Tucano" target="_blank">GitHub</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Benchmarks -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Benchmarks</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                During training, we saved several checkpoints for each model at intervals of approximately 10.5 billion tokens. For every checkpoint, we employed a comprehensive evaluation harness. This evaluation harness contains several Portuguese native evaluations and English benchmarks machine-translated into Portuguese.
+              </p>
+              
+              <table>
+                <thead>
+                    <tr>
+                        <th>Benchmark</th>
+                        <th>n-shot</th>
+                        <th>Origin</th>
+                        <th>Type</th>
+                        <th>Metric</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ENEM</td>
+                        <td>3-shot</td>
+                        <td>Native</td>
+                        <td>Q&A</td>
+                        <td><code>acc</code></td>
+                    </tr>
+                    <tr>
+                        <td>BLUEX</td>
+                        <td>3-shot</td>
+                        <td>Native</td>
+                        <td>Q&A</td>
+                        <td><code>acc</code></td>
+                    </tr>
+                    <tr>
+                        <td>OAB Exams</td>
+                        <td>3-shot</td>
+                        <td>Native</td>
+                        <td>Q&A</td>
+                        <td><code>acc</code></td>
+                    </tr>
+                    <tr>
+                        <td>ASSIN2 RTE</td>
+                        <td>15-shot</td>
+                        <td>Native</td>
+                        <td>Entailment</td>
+                        <td><code>f1 macro</code></td>
+                    </tr>
+                    <tr>
+                        <td>ASSIN2 STS</td>
+                        <td>10-shot</td>
+                        <td>Native</td>
+                        <td>Similarity</td>
+                        <td><code>pearson</code></td>
+                    </tr>
+                    <tr>
+                        <td>FAQUAD NLI</td>
+                        <td>15-shot</td>
+                        <td>Native</td>
+                        <td>Entailment</td>
+                        <td><code>f1 macro</code></td>
+                    </tr>
+                    <tr>
+                        <td>HateBR</td>
+                        <td>25-shot</td>
+                        <td>Native</td>
+                        <td>Classification</td>
+                        <td><code>f1 macro</code></td>
+                    </tr>
+                    <tr>
+                        <td>PT Hate Speech</td>
+                        <td>25-shot</td>
+                        <td>Native</td>
+                        <td>Classification</td>
+                        <td><code>f1 macro</code></td>
+                    </tr>
+                    <tr>
+                        <td>TweetSentBR</td>
+                        <td>25-shot</td>
+                        <td>Native</td>
+                        <td>Classification</td>
+                        <td><code>f1 macro</code></td>
+                    </tr>
+                    <tr>
+                        <td>CALAME-PT</td>
+                        <td>0-shot</td>
+                        <td>Native</td>
+                        <td>Next Word Prediction</td>
+                        <td><code>acc</code></td>
+                    </tr>
+                    <tr>
+                        <td>ARC-Challenge</td>
+                        <td>25-shot</td>
+                        <td>Translated</td>
+                        <td>Q&A</td>
+                        <td><code>acc norm</code></td>
+                    </tr>
+                    <tr>
+                        <td>HellaSwag</td>
+                        <td>10-shot</td>
+                        <td>Translated</td>
+                        <td>Q&A</td>
+                        <td><code>acc norm</code></td>
+                    </tr>
+                    <tr>
+                        <td>TruthfulQA</td>
+                        <td>0-shot</td>
+                        <td>Translated</td>
+                        <td>Q&A</td>
+                        <td><code>bleurt</code></td>
+                    </tr>
+                    <tr>
+                        <td>LAMBADA</td>
+                        <td>0-shot</td>
+                        <td>Translated</td>
+                        <td>Next Word Prediction</td>
+                        <td><code>acc</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 10px;  text-align: center;">
+            To learn how to replicate our usage of this harness, please visit the evaluation section of our <a href="https://github.com/Nkluge-correa/Tucano/tree/main/evaluations/README.md" target="_blank">GitHub</a> repository.
+            </p>
+
+            <p>
+              Our evaluations revealed that for several benchmarks, token ingestions (i.e., <i>how long a model is pre-trained on new tokens</i>) seem to <strong>not be correlated to benchmark performance</strong>. Hence, we hypothesize that results showing good performance on such benchmarks (i.e., above what a random guesser would achieve) might indicate not language modeling pretraining but overfitting to the style of evaluation these benchmarks bring.
+              <br><br>
+              For example, while certain benchmarks <strong>show no change in performance, regardless of the number of tokens ingested</strong>:
+            </p>
+            <img src="static/images/evals-bluex.png" alt="Evaluation scores as a function of token ingestion for the BLUEX benchmark." class="blend-img-background center-image"/>
+            <p>
+              Other benchmarks prove to be a <strong>indicator of model improvement in terms of its language modeling capabilities</strong> as pretraining progresses:
+            </p>
+            <img src="static/images/evals-calame_pt.png" alt="Evaluation scores as a function of token ingestion for the CALAME-PT benchmark." class="blend-img-background center-image"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Results -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Results</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                Focusing only on the benchmarks that showed a significant correlation between language modeling pretraining and performance, we see that our largest models <strong>outperformed several multilingual and natively pre-trained LLMs across nearly all benchmarks</strong>, including the recently released Llama-3.2-1b. Our models also outperformed larger multilingual models, such as Bloom-1b7. 
+              </p>
+              <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><strong>Average</strong></th>
+                        <th><strong>Calame-PT</strong></th>
+                        <th><strong>Lambada-PT</strong></th>
+                        <th><strong>ARC-PT</strong></th>
+                        <th><strong>HellaSwag-PT</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Llama-3.2-3B</td>
+                        <td>52</td>
+                        <td>58.43</td>
+                        <td>49.1</td>
+                        <td>43.25</td>
+                        <td>57.2</td>
+                    </tr>
+                    <tr>
+                        <td>Granite-3.0-2b</td>
+                        <td>51.63</td>
+                        <td>56.36</td>
+                        <td>47.55</td>
+                        <td>42.56</td>
+                        <td>60.05</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tucano-2b4</strong></td>
+                        <td>43.58</td>
+                        <td>59.06</td>
+                        <td>37.67</td>
+                        <td>30.43</td>
+                        <td>47.17</td>
+                    </tr>
+                    <tr>
+                        <td>Llama-3.2-1B</td>
+                        <td>42.95</td>
+                        <td>51.83</td>
+                        <td>41.02</td>
+                        <td>33.5</td>
+                        <td>45.44</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tucano-1b1</strong></td>
+                        <td>41.55</td>
+                        <td>58.24</td>
+                        <td>34.7</td>
+                        <td>30.43</td>
+                        <td>42.84</td>
+                    </tr>
+                    <tr>
+                        <td>Gemma-2b</td>
+                        <td>40.38</td>
+                        <td>51.16</td>
+                        <td>39.88</td>
+                        <td>37.95</td>
+                        <td>32.53</td>
+                    </tr>
+                    <tr>
+                        <td>Bloom-1b7</td>
+                        <td>40.37</td>
+                        <td>55.64</td>
+                        <td>31.98</td>
+                        <td>30.34</td>
+                        <td>43.52</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tucano-630m</strong></td>
+                        <td>39.5</td>
+                        <td>56.55</td>
+                        <td>33.13</td>
+                        <td>28.89</td>
+                        <td>39.41</td>
+                    </tr>
+                    <tr>
+                        <td>Gemma-2-2b</td>
+                        <td>39.21</td>
+                        <td>56.7</td>
+                        <td>47.1</td>
+                        <td>24.19</td>
+                        <td>28.85</td>
+                    </tr>
+                    <tr>
+                        <td>Bloom-1b1</td>
+                        <td>38.18</td>
+                        <td>52.94</td>
+                        <td>30.22</td>
+                        <td>29.83</td>
+                        <td>39.74</td>
+                    </tr>
+                    <tr>
+                        <td>GlórIA-1b3</td>
+                        <td>36.05</td>
+                        <td>52.79</td>
+                        <td>27.71</td>
+                        <td>26.67</td>
+                        <td>37.04</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tucano-160m</strong></td>
+                        <td>35.14</td>
+                        <td>52.31</td>
+                        <td>28.16</td>
+                        <td>27.01</td>
+                        <td>33.07</td>
+                    </tr>
+                    <tr>
+                        <td>Xglm-564m</td>
+                        <td>34.55</td>
+                        <td>50.58</td>
+                        <td>27.42</td>
+                        <td>25.56</td>
+                        <td>34.64</td>
+                    </tr>
+                    <tr>
+                        <td>Bloom-560m</td>
+                        <td>34.32</td>
+                        <td>49.95</td>
+                        <td>25.44</td>
+                        <td>24.74</td>
+                        <td>37.15</td>
+                    </tr>
+                    <tr>
+                        <td>TTL-460m</td>
+                        <td>33.78</td>
+                        <td>49.42</td>
+                        <td>23.29</td>
+                        <td>29.4</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>mGPT-1b3</td>
+                        <td>31.81</td>
+                        <td>47.14</td>
+                        <td>29.92</td>
+                        <td>23.81</td>
+                        <td>26.37</td>
+                    </tr>
+                    <tr>
+                        <td>TTL-160m</td>
+                        <td>30.78</td>
+                        <td>46.72</td>
+                        <td>20.98</td>
+                        <td>26.15</td>
+                        <td>29.29</td>
+                    </tr>
+                    <tr>
+                        <td>Lola-v1</td>
+                        <td>30.19</td>
+                        <td>26.4</td>
+                        <td>18.32</td>
+                        <td>30.42</td>
+                        <td>45.61</td>
+                    </tr>
+                    <tr>
+                        <td>GPorTuguese</td>
+                        <td>28.92</td>
+                        <td>40.61</td>
+                        <td>22.98</td>
+                        <td>22.48</td>
+                        <td>29.62</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p>Meanwhile, our custom Portuguese evaluation, based on the <a href="https://github.com/tatsu-lab/alpaca_eval" target="_blank">AlpacaEval</a> methodology, demonstrates that our instruct models, <strong>Tucano-1b1-Instruct</strong> and <strong>Tucano-2b4-Instruct</strong>, produce outputs preferred over much larger models such as <strong>Sabiá-7b</strong> and <strong>Gervásio-7b</strong>.</p>
+
+            <br>
+            
+            <table>
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th><strong>Avg. Length</strong></th>
+                      <th><strong>Wins</strong></th>
+                      <th><strong>Base Wins</strong></th>
+                      <th><strong>Total Matches</strong></th>
+                      <th><strong>Length-Controlled Win Rate (%)</strong></th>
+                      <th><strong>LC Std. Error</strong></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Llama-3.2-3B-Instruct</td>
+                      <td>1609</td>
+                      <td>257</td>
+                      <td>548</td>
+                      <td>805</td>
+                      <td>21.06</td>
+                      <td>0.075</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Tucano-2b4-Instruct</strong></td>
+                      <td>1843</td>
+                      <td>151</td>
+                      <td>654</td>
+                      <td>805</td>
+                      <td>13.00</td>
+                      <td>0.071</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Tucano-1b1-Instruct</strong></td>
+                      <td>1667</td>
+                      <td>124</td>
+                      <td>681</td>
+                      <td>805</td>
+                      <td>8.80</td>
+                      <td>0.083</td>
+                  </tr>
+                  <tr>
+                      <td>Llama-3.2-1B-Instruct</td>
+                      <td>1429</td>
+                      <td>99</td>
+                      <td>706</td>
+                      <td>805</td>
+                      <td>7.15</td>
+                      <td>0.057</td>
+                  </tr>
+                  <tr>
+                      <td>TeenyTinyLlama-460m-Chat</td>
+                      <td>1333</td>
+                      <td>28</td>
+                      <td>777</td>
+                      <td>805</td>
+                      <td>2.84</td>
+                      <td>0.059</td>
+                  </tr>
+                  <tr>
+                      <td>Sabiá-7b</td>
+                      <td>5011</td>
+                      <td>1</td>
+                      <td>804</td>
+                      <td>805</td>
+                      <td>0.076</td>
+                      <td>0.0043</td>
+                  </tr>
+                  <tr>
+                      <td>Gervásio-7b</td>
+                      <td>5740</td>
+                      <td>1</td>
+                      <td>804</td>
+                      <td>805</td>
+                      <td>0.026</td>
+                      <td>0.0016</td>
+                  </tr>
+              </tbody>
+          </table>
+                  
+            
+            <p style="margin-top: 10px;  text-align: center;">
+            All evaluations for all benchmarks that form our custom harness are available on our <a href="https://github.com/Nkluge-correa/Tucano/blob/main/evaluations/README.md" target="_blank">GitHub</a> repository.
+            </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How To Use -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">How To Use</h2>
+              <div class="level-set has-text-justified">
+                <p>
+                  All our models are available on <a href="https://huggingface.co/TucanoBR" target="_blank">Hugging Face</a>, and can easily be used by any application in compliance with the <strong>Apache 2.0 license</strong>.
+                </p>
+              <img src="static/images/code-sample.png" alt="Example code to use Tucano models." class="blend-img-background center-image"/>
+              <br><br>
+              <p>
+                The Tucano series significantly contributes to the Portuguese NLP community in several ways. All <strong>models, along with intermediary checkpoints, datasets, code implementations, and logs, are freely accessible through the repositories associated with this study</strong>, setting the Tucano series apart from several other works.
+              </p>
+              <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><strong>Model</strong></th>
+                        <th><strong>Data</strong></th>
+                        <th><strong>Code</strong></th>
+                        <th><strong>Logs</strong></th>
+                        <th><strong>#models</strong></th>
+                        <th><strong>#ckpts</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tucano🟢🟡🔵</strong></td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>6</td>
+                        <td>111</td>
+                    </tr>
+                    <tr>
+                        <td>TeenyTinyLlama</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>3</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>GPorTuguese</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>PTT5</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>RoBERTaLexPT</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Albertina</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BERTimbau</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>DeBERTinha</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Gervásio</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>PTT5-v2</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>4</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BERTabaporu</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Glória</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Sabiá</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Sabiá-2</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>2</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Sabiá-3</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>1</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 10px; text-align: center;">
+              In terms of open (and reproducible) development, many aspects of past studies are indeed closed. Given the level of computing needed to practice deep learning at such scales, a lack of reusable code and materials can seriously slow down the Portuguese NLP community's progress while hindering its sustainability. With <strong>Tucano</strong> and <strong>GigaVerbo's</strong> development, we hope to make this scenario more sustainable and open.
+            </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aknowlegments -->
+      <section class="section hero is-small">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full">
+              <div class="content">
+                <h2 class="title is-3">Aknowlegments</h2>
+                <div class="level-set has-text-justified">
+                  <p>
+                    We gratefully acknowledge the granted access to the <a href="https://www.hpc.uni-bonn.de/en/systems/marvin" 
+                    target="_blank">Marvin cluster</a> hosted by <a href="https://www.uni-bonn.de/en">University of Bonn</a> 
+                    along with the support provided by its <strong>High Performance Computing &amp; Analytics Lab</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@misc{correa24tucano,
+  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
+  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2024}
+}
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p style="text-align: center;">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br>
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
