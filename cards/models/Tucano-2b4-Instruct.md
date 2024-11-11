@@ -399,7 +399,7 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ## Evaluations
 
-To evaluate the `Instruct` versions of our models, we used [AlpacaEval](https://github.com/tatsu-lab/alpaca_eval) 2.0 with length-controlled win-rates, a fast and relatively cheap evaluation method that is highly correlated with human preferences. To learn more about our evaluation read [our documentation](https://github.com/Nkluge-correa/Tucano/blob/main/evaluations/README.md).
+To evaluate the `Instruct` versions of our models, we used [AlpacaEval](https://github.com/tatsu-lab/alpaca_eval) 2.0 with length-controlled win rates, a fast and relatively cheap evaluation method that is highly correlated with human preferences and evaluations of pairwise comparisons. To learn more about our evaluation read [our documentation](https://github.com/Nkluge-correa/Tucano/blob/main/evaluations/README.md).
 
 |                         | Avg. Length | Wins | Base Wins | Total Matches | Length-Controlled Win Rate (%) | LC Std. Error |
 |-------------------------|-------------|------|-----------|---------------|--------------------------------|---------------|

@@ -21,7 +21,7 @@ To stimulate the future of open development of neural text generation in Portugu
 
 ## Reproducing
 
-This repository contains the source code used to train the Tucano series. We created all of our code implementations using a [`PyTorch`](https://github.com/pytorch/pytorch) based training script, while also using other auxiliary libraries to, for example, define our model's architecture ([`Transformers`](https://github.com/huggingface/transformers)), process our dataset ([`Datasets`](https://github.com/huggingface/datasets), [`Tokenizers`](https://github.com/huggingface/tokenizers), [`Sentencepiece`](https://github.com/google/sentencepiece)), optimize training speed and minimize memory footprint ([`Accelerate`](https://github.com/huggingface/accelerate), [`FlashAttention`](https://github.com/TriDao/FlashAttention), [`Triton`](https://github.com/triton-lang/triton), [`Liger Kernel`](https://github.com/linkedin/Liger-Kernel)), and logging of experiments ([`CodeCarbon`](https://github.com/mlco2/codecarbon), [`W&B`](https://github.com/wandb/wandb)). For DPO fine-tuning, we used [TRL](https://github.com/huggingface/trl).
+This repository contains the source code used to train the Tucano series. We created all of our code implementations using a [`PyTorch`](https://github.com/pytorch/pytorch) based training script, while also using other auxiliary libraries to, for example, define our model's architecture ([`Transformers`](https://github.com/huggingface/transformers)), process our dataset ([`Datasets`](https://github.com/huggingface/datasets), [`Tokenizers`](https://github.com/huggingface/tokenizers), [`Sentencepiece`](https://github.com/google/sentencepiece)), optimize training speed and minimize memory footprint ([`Accelerate`](https://github.com/huggingface/accelerate), [`FlashAttention`](https://github.com/TriDao/FlashAttention), [`Triton`](https://github.com/triton-lang/triton), [`Liger Kernel`](https://github.com/linkedin/Liger-Kernel)), and logging of experiments ([`CodeCarbon`](https://github.com/mlco2/codecarbon), [`W&B`](https://github.com/wandb/wandb)). For DPO fine-tuning, we used [`TRL`](https://github.com/huggingface/trl).
 
 All requirements are listed in the [`requirements.txt`](./requirements.txt) file. The Python version used is 3.10.12.
 
@@ -47,13 +47,9 @@ All training configurations are specified via YAML files (e.g., [`specs-tucano-1
 
 All logs (e.g., training logs, evaluation results, energy consumption) related to training and evaluating the Tucano series can be found in the [`/logs`](./logs) folder. The manipulation and creation of the plots associated with our study are done via the following [notebook](./logs/logs-and-plots.ipynb).
 
-### Evaluations
-
-To learn more about the evaluation harness used to access the capabilities of the Tucano series, read [this file](./evaluations/README.md).
-
 ### Fine-Tuning
 
-Our fine-tuning process was divided into two stages: supervised fice-tuning ("instruction-tuning") and direct preference optimization (DPO).
+Our fine-tuning process was divided into two stages: supervised fine-tuning ("instruction-tuning") and direct preference optimization (DPO).
 
 #### Supervised Fine-Tuning (SFT)
 
@@ -72,6 +68,10 @@ The main script used for the DPO-tuning are:
 - The `accelerate` configuration file ([`dpo-accelerate-config.yml`](./dpo-accelerate-config.yml))
 
 To learn more about our preference modeling dataset, read [this dataset card](https://huggingface.co/datasets/nicholasKluge/reward-aira-dataset).
+
+### Evaluations
+
+To learn more about the evaluation harness used to access the capabilities of the Tucano series, read [this file](./evaluations/README.md).
 
 ## Intended Uses
 
