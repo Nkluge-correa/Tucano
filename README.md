@@ -17,7 +17,7 @@
         <img src="./img/logo.png" alt="An illustration of a Tucano bird showing vibrant colors like yellow, orange, blue, green, and black." height="400">
 </p>
 
-To stimulate the future of open development of neural text generation in Portuguese, we present both **GigaVerbo**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **Tucano**, a series of decoder-transformers based on the Llama 2 architecture, natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on GitHub and Hugging Face.
+To stimulate the future of open development of neural text generation in Portuguese, we present both **GigaVerbo**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **Tucano**, a series of decoder-transformers natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on GitHub and Hugging Face.
 
 ## Reproducing
 

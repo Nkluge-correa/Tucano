@@ -283,7 +283,7 @@ base_model:
 
 ## Model Summary
 
-Tucano-1b1-Instruct is a fine-tuned version of [Tucano-1b1](https://huggingface.co/TucanoBR/Tucano-1b1). **[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers based on the Llama 2 architecture, pretrained natively in Portuguese. All Tucano models were trained on **[GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo)**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens.
+Tucano-1b1-Instruct is a fine-tuned version of [Tucano-1b1](https://huggingface.co/TucanoBR/Tucano-1b1). **[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers natively pretrained in Portuguese. All Tucano models were trained on **[GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo)**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens.
 
 The fine-tuning process was divided into two stages:
 

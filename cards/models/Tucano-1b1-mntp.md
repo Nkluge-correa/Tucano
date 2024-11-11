@@ -137,7 +137,7 @@ base_model:
 
 ## Model Summary
 
-**[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers based on the Llama 2 architecture, pretrained natively in Portuguese. Tucano-1b1-mntp is a text-encoder generated via the methodology proposed in the [LLM2Vec](https://arxiv.org/abs/2404.05961) paper.
+**[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers natively pretrained in Portuguese. Tucano-1b1-mntp is a text-encoder generated via the methodology proposed in the [LLM2Vec](https://arxiv.org/abs/2404.05961) paper.
 
 ## Details
 

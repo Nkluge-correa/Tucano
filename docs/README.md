@@ -18,7 +18,7 @@
         <img src="../img/logo.png" alt="An illustration of a Tucano bird showing vibrant colors like yellow, orange, blue, green, and black." height="400">
 </p>
 
-To stimulate the future of open development of neural text generation in Portuguese, we present both **[GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo)**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **[Tucano](https://huggingface.co/TucanoBR)**, a series of decoder-transformers based on the Llama 2 architecture, natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on [GitHub](https://github.com/Nkluge-correa/Tucano) and [Hugging Face](https://huggingface.co/TucanoBR).
+To stimulate the future of open development of neural text generation in Portuguese, we present both **[GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo)**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **[Tucano](https://huggingface.co/TucanoBR)**, a series of decoder-transformers natively pretrained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on [GitHub](https://github.com/Nkluge-correa/Tucano) and [Hugging Face](https://huggingface.co/TucanoBR).
 
 <h3 style="text-align: center;">Website License</h3>
 <hr>
