@@ -36,7 +36,7 @@ To learn more about the scripts used to handle our pretraining corpus, read [thi
 Even though we repurposed the [TeenyTinyLlama](https://github.com/Nkluge-correa/TeenyTinyLlama) tokenizer for the Tucano models, for those interested in training new tokenizers, this repository contains two scripts for training tokenizers:
 
 - Sentencepience ([`train-sentencepiece-tokenizer.py`](./train-sentencepiece-tokenizer.py)).
-- BPE ([`train-BPE-tokenizer.py`](./train-BPE-tokenizer.py)).
+- BPE ([`train-bpe-tokenizer.py`](./train-bpe-tokenizer.py)).
 
 The two primary scripts used to train the Tucano series are:
 
