@@ -395,7 +395,7 @@ Like almost all other language models trained on large text datasets scraped fro
 
 - **Repetition and Verbosity:** Tucano models may get stuck on repetition loops (especially if the repetition penalty during generations is set to a meager value) or produce verbose responses unrelated to the prompt it was given.
 
-Hence, even though our models are released with a permissive license, we urge users to perform their risk analysis on them if they intend to use them for real-world applications. We also have humans moderating the outputs of these models in applications where they will interact with an audience, guaranteeing users are always aware they are interacting with a language model.
+Hence, even though our models are released with a permissive license, we urge users to perform their risk analysis on them if they intend to use them for real-world applications.
 
 ## Evaluations
 
