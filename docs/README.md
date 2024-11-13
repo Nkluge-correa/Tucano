@@ -2,8 +2,8 @@
 
 # Tucano: Advancing Neural Text Generation for Portuguese
 
-<a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
-    <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-009C3B.svg" alt="arXiv">
+<a href="https://arxiv.org/abs/2411.07854" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-2411.07854-009C3B.svg" alt="arXiv">
 </a>
 <a href="https://huggingface.co/TucanoBR" target="_blank">
     <img src="https://img.shields.io/badge/HF%20Models-Tucano-FFDF00.svg" alt="HF Link">

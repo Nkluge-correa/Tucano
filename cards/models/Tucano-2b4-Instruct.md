@@ -290,7 +290,7 @@ The fine-tuning process was divided into two stages:
 - Supervised fine-tuning (SFT) using the [TucanoBR/Tucano-SFT](https://huggingface.co/datasets/TucanoBR/Tucano-SFT), a concatenation of three different instruction tuning datasets ([`cnmoro/GPT4-500k-Augmented-PTBR-Clean`](https://huggingface.co/datasets/cnmoro/GPT4-500k-Augmented-PTBR-Clean), [`rhaymison/orca-math-portuguese-64k`](https://huggingface.co/datasets/rhaymison/orca-math-portuguese-64k), [`nicholasKluge/instruct-aira-dataset-v3`](https://huggingface.co/datasets/nicholasKluge/instruct-aira-dataset-v3)).
 - Direct Preference Optimization (DPO) using the [nicholasKluge/reward-aira-dataset](https://huggingface.co/datasets/nicholasKluge/reward-aira-dataset).
 
-Read our preprint [here](https://arxiv.org/abs/xxxx.xxxxx).
+Read our preprint [here](https://arxiv.org/abs/2411.07854).
 
 ## Details
 
@@ -414,11 +414,14 @@ To evaluate the `Instruct` versions of our models, we used [AlpacaEval](https://
 ## Cite as 🤗
 
 ```latex
-@misc{correa24tucano,
-  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
-  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
 }
 ```
 

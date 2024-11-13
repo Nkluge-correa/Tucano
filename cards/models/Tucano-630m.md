@@ -263,7 +263,7 @@ model-index:
 
 **[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers natively pretrained in Portuguese. All Tucano models were trained on **[GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo)**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens.
 
-Read our preprint [here](https://arxiv.org/abs/xxxx.xxxxx).
+Read our preprint [here](https://arxiv.org/abs/2411.07854).
 
 ## Details
 
@@ -370,7 +370,7 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ## Evaluations
 
-The table below compares our models against several Portuguese and multilingual language models on the evaluation harness used in our study. More information on it can be found [here](https://github.com/Nkluge-correa/Tucano/tree/main/evaluations/README.md). To learn more about our evaluation harness selection, [read our preprint](https://arxiv.org/abs/xxxx.xxxxx).
+The table below compares our models against several Portuguese and multilingual language models on the evaluation harness used in our study. More information on it can be found [here](https://github.com/Nkluge-correa/Tucano/tree/main/evaluations/README.md). To learn more about our evaluation harness selection, [read our preprint](https://arxiv.org/abs/2411.07854).
 
 |                 | Average | Calame-PT | Lambada-PT | ARC-PT | HellaSwag-PT |
 |-----------------|---------|-----------|------------|--------|--------------|
@@ -397,11 +397,14 @@ The table below compares our models against several Portuguese and multilingual 
 ## Cite as 🤗
 
 ```latex
-@misc{correa24tucano,
-  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
-  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
 }
 ```
 

@@ -72,12 +72,12 @@ size_categories:
 
 - **Homepage:** https://huggingface.co/datasets/TucanoBR/GigaVerbo
 - **Repository:** https://huggingface.co/datasets/TucanoBR/GigaVerbo
-- **Paper:** [Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/xxxx.xxxxx)
+- **Paper:** [Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)
 - **Point of Contact:** [Nk-correa](mailto:kluge@uni-bonn.de)
 
 ### Dataset Summary
 
-GigaVerbo is an extensive dataset comprising **780 GB of Portuguese text**, being a concatenated version of several datasets available in [Hugging Face](https://huggingface.co/datasets?task_categories=task_categories:text-generation&language=language:pt&sort=trending), containing over **200 billion tokens**. It encompasses various sources, including crawled websites, articles, translated conversations, and legal documents. This dataset offers a comprehensive and rich resource for various natural language processing tasks, providing researchers and developers with ample material for training and testing language models, text analysis algorithms, and other language-related applications for Portuguese. This dataset was used to train the Tucano series, described in "_[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/xxxx.xxxxx)_".
+GigaVerbo is an extensive dataset comprising **780 GB of Portuguese text**, being a concatenated version of several datasets available in [Hugging Face](https://huggingface.co/datasets?task_categories=task_categories:text-generation&language=language:pt&sort=trending), containing over **200 billion tokens**. It encompasses various sources, including crawled websites, articles, translated conversations, and legal documents. This dataset offers a comprehensive and rich resource for various natural language processing tasks, providing researchers and developers with ample material for training and testing language models, text analysis algorithms, and other language-related applications for Portuguese. This dataset was used to train the Tucano series, described in "_[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)_".
 
 ### Supported Tasks and Leaderboards
 
@@ -127,7 +127,7 @@ dataset = load_dataset("TucanoBR/GigaVerbo", split='train', streaming=True)
 
 ### Curation Rationale
 
-This dataset was developed as part of the study "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/xxxx.xxxxx)". In short, GigaVerbo is the concatenation of several [openly available Portuguese text datasets](https://huggingface.co/datasets?task_categories=task_categories:text-generation&language=language:pt&sort=trending).
+This dataset was developed as part of the study "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)". In short, GigaVerbo is the concatenation of several [openly available Portuguese text datasets](https://huggingface.co/datasets?task_categories=task_categories:text-generation&language=language:pt&sort=trending).
 
 ### Source Data
 
@@ -244,11 +244,14 @@ The following datasets and respective licenses from GigaVerbo (only training spl
 
 ```latex
 
-@misc{correa24tucano,
-  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
-  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
 }
 
 ```

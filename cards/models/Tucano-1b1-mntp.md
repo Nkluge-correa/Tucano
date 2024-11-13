@@ -224,11 +224,14 @@ To reproduce these results, use the [`mteb-custom-eval.py`](https://huggingface.
 ## Cite as 🤗
 
 ```latex
-@misc{correa24tucano,
-  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
-  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
 }
 ```
 

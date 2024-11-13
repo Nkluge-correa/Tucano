@@ -11,7 +11,7 @@ The plots associated with our study are manipulated and created using the follow
 
 ## Tokenizer Test
 
-In the notebook, you can also find the tokenizer test described in our [paper](https://arxiv.org/abs/xxxx.xxxxx). The text sample used to access the compression capabilities of the tokenizers can be found in the [tokenizer-test-set.txt](./evals/tokenizer-test-set.txt) file. Below, you can find a list of the tokenizers we ran evaluation:
+In the notebook, you can also find the tokenizer test described in our [paper](https://arxiv.org/abs/2411.07854). The text sample used to access the compression capabilities of the tokenizers can be found in the [tokenizer-test-set.txt](./evals/tokenizer-test-set.txt) file. Below, you can find a list of the tokenizers we ran evaluation:
 
 - [`TucanoBR/Tucano-1b1`](https://huggingface.co/TucanoBR/Tucano-1b1)
 - [`neuralmind/bert-base-portuguese-cased`](https://huggingface.co/neuralmind/bert-base-portuguese-cased)

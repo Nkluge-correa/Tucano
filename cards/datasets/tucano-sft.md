@@ -68,7 +68,7 @@ size_categories:
 
 - **Homepage:** https://huggingface.co/datasets/TucanoBR/Tucano-SFT
 - **Repository:** https://huggingface.co/datasets/TucanoBR/Tucano-SFT
-- **Paper:** [Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/xxxx.xxxxx)
+- **Paper:** [Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)
 - **Point of Contact:** [Nk-correa](mailto:kluge@uni-bonn.de)
 
 ### Dataset Summary
@@ -126,7 +126,7 @@ dataset = load_dataset("TucanoBR/Tucano-SFT", split='train', streaming=True)
 
 ### Curation Rationale
 
-This dataset was developed as part of the study "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/xxxx.xxxxx)".
+This dataset was developed as part of the study "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)".
 
 ### Source Data
 

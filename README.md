@@ -2,8 +2,8 @@
   
 # Tucano: Advancing Neural Text Generation for Portuguese
 
-<a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
-    <img src="https://img.shields.io/badge/arXiv-xxxx.xxxxx-009C3B.svg" alt="arXiv">
+<a href="https://arxiv.org/abs/2411.07854" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-2411.07854-009C3B.svg" alt="arXiv">
 </a>
 <a href="https://huggingface.co/TucanoBR" target="_blank">
     <img src="https://img.shields.io/badge/HF%20Models-Tucano-FFDF00.svg" alt="HF Link">
@@ -104,11 +104,14 @@ Hence, even though our models are released with a permissive license, we urge us
 ## Cite as 🤗
 
 ```latex
-@misc{correa24tucano,
-  title = {{Tucano: Advancing Neural Text Generation for Portuguese}},
-  author = {Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
 }
 ```
 
