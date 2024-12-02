@@ -101,6 +101,15 @@ Like almost all other language models trained on large text datasets scraped fro
 
 Hence, even though our models are released with a permissive license, we urge users to perform their risk analysis on them if they intend to use them for real-world applications.
 
+#### How to use the OpenVINO models with HuggingFace
+
+[_Alessandro de Oliveira Faria_](https://github.com/cabelo) (Intel Innovator) is responsible for maintaining the quantization of the Tucano model for Intel OpenVINO technology, ensuring optimization and efficiency in production environments.
+
+Link model FP16 : [Tucano-2b4-Instruct-fp16-ov](https://huggingface.co/cabelo/Tucano-2b4-Instruct-fp16-ov)
+
+Source and more information in [Tucano-2b4-Instruct-openvino](https://github.com/cabelo/Tucano-2b4-Instruct-openvino)
+
+
 ## Cite as 🤗
 
 ```latex
