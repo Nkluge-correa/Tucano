@@ -10,13 +10,13 @@ datasets:
 - nicholasKluge/wikipedia-PT
 pipeline_tag: sentence-similarity
 co2_eq_emissions:
-  emissions: 3690
+  emissions: 4662
   source: CodeCarbon
   training_type: pre-training
   geographical_location: Germany
   hardware_used: NVIDIA A100-SXM4-80GB
 model-index:
-- name: Tucano-1b1-mntp
+- name: Tucano-2b4-Instruct-mntp
   results:
   - task:
       type: Classification
@@ -27,7 +27,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.5709
+      value: 0.5862
   - task:
       type: Classification
     dataset:
@@ -37,7 +37,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.6202
+      value: 0.6352
   - task:
       type: Classification
     dataset:
@@ -47,7 +47,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.5859
+      value: 0.5959
   - task:
       type: Classification
     dataset:
@@ -57,7 +57,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.6436
+      value: 0.6622
   - task:
       type: Classification
     dataset:
@@ -67,7 +67,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.4637
+      value: 0.4667
   - task:
       type: Classification
     dataset:
@@ -77,7 +77,7 @@ model-index:
       split: train
     metrics:
     - type: main_score
-      value: 0.6096
+      value: 0.6079
   - task:
       type: Retrieval
     dataset:
@@ -87,7 +87,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.0935
+      value: 0.1043
   - task:
       type: Retrieval
     dataset:
@@ -97,7 +97,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.5383
+      value: 0.6200
   - task:
       type: PairClassification
     dataset:
@@ -107,7 +107,7 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.6383
+      value: 0.6446
   - task:
       type: STS
     dataset:
@@ -117,7 +117,7 @@ model-index:
       split: dev
     metrics:
     - type: main_score
-      value: 0.6715
+      value: 0.6520
   - task:
       type: STS
     dataset:
@@ -127,30 +127,30 @@ model-index:
       split: test
     metrics:
     - type: main_score
-      value: 0.5501
+      value: 0.5581
 base_model:
-- TucanoBR/Tucano-1b1
+- TucanoBR/Tucano-2b4-Instruct
 ---
-# Tucano-1b1-mntp
+# Tucano-2b4-Instruct-mntp
 
 <img src="./logo.png" alt="An illustration of a Tucano bird showing vibrant colors like yellow, orange, blue, green, and black." height="200">
 
 ## Model Summary
 
-**[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers natively pretrained in Portuguese. Tucano-1b1-mntp is a text-encoder generated via the methodology proposed in the [LLM2Vec](https://arxiv.org/abs/2404.05961) paper.
+**[Tucano](https://huggingface.co/TucanoBR)** is a series of decoder-transformers natively pretrained in Portuguese. Tucano-2b4-Instruct-mntp is a text-encoder generated via the methodology proposed in the [LLM2Vec](https://arxiv.org/abs/2404.05961) paper.
 
 ## Details
 
 - **Architecture:** a decoder-only tranformer adapted for text-encoding tasks
-- **Size:** 1,100,048,384 parameters
+- **Size:** 2,444,618,240 parameters
 - **Context length:** 512 tokens
 - **Dataset:** Pretraining: [TucanoBR/GigaVerbo](https://huggingface.co/datasets/TucanoBR/GigaVerbo) | Fine-tuning: [nicholasKluge/wikipedia-PT](https://huggingface.co/datasets/nicholasKluge/wikipedia-PT)
 - **Language:** Portuguese
 - **Number of steps:** 102,670
 - **GPU:** 1 NVIDIA A100-SXM4-80GB
-- **Training time**: ~ 27 hours
-- **Emissions:** 3.69 KgCO2 (Germany)
-- **Total energy consumption:** 9.99 kWh
+- **Training time**: ~ 30 hours
+- **Emissions:** 4.66 KgCO2 (Germany)
+- **Total energy consumption:** 12.6 kWh
 
 This repository has the [source code](https://github.com/McGill-NLP/llm2vec) used to train this model.
 
@@ -165,7 +165,7 @@ The following hyperparameters were used during training (full configuration file
 - **scheduler type:** linear
 - **epochs:** 3.0
 
-A final validation perplexity of 4.71 and masked language modeling accuracy of 67% were achieved.
+A final validation perplexity of 3.97 and masked language modeling accuracy of 70% were achieved.
 
 ## Intended Uses
 
@@ -179,8 +179,8 @@ from llm2vec import LLM2Vec
 import torch
 
 l2v_model = LLM2Vec.from_pretrained(
-        "TucanoBR/Tucano-1b1",
-        peft_model_name_or_path="TucanoBR/Tucano-1b1-mntp",
+        "TucanoBR/TTucano-2b4-Instruct",
+        peft_model_name_or_path="TucanoBR/Tucano-2b4-Instruct-mntp",
         device_map="cuda" if torch.cuda.is_available() else "cpu",
         torch_dtype=torch.bfloat16,
     )
@@ -219,7 +219,7 @@ The table below provides evaluation results from several portuguese benchmarks f
 | Tucano-2b4-Instruct-mntp  | 0.5576  | 0.6446             | 0.6051 | 0.5924         | 0.3622    |
 | Tucano-1b1-mntp           | 0.5465  | 0.6381             | 0.6106 | 0.5824         | 0.3288    |
 
-To reproduce these results, use the [`mteb-custom-eval.py`](https://huggingface.co/TucanoBR/Tucano-1b1-mntp/blob/main/mteb-custom-eval.py) script. Individual results can be found in the [`evals.json`](https://huggingface.co/TucanoBR/Tucano-1b1-mntp/blob/main/evals.json) file.
+To reproduce these results, use the [`mteb-custom-eval.py`](https://huggingface.co/TucanoBR/Tucano-2b4-Instruct-mntp/blob/main/mteb-custom-eval.py) script. Individual results can be found in the [`evals.json`](https://huggingface.co/TucanoBR/Tucano-2b4-Instruct-mntp/blob/main/evals.json) file.
 
 ## Cite as 🤗
 

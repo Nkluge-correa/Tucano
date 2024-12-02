@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/HF%20Models-Tucano-FFDF00.svg" alt="HF Link">
 </a>
 <a href="https://github.com/Nkluge-correa/Tucano/blob/main/LICENSE" target="_blank">
-    <img src="https://img.shields.io/badge/License-Apache-002776.svg" alt="License: MIT">
+    <img src="https://img.shields.io/badge/License-Apache-002776.svg" alt="License: Apache 2.0">
 </a>
 
 </div>
@@ -18,6 +18,19 @@
 </p>
 
 To stimulate the future of open development of neural text generation in Portuguese, we present both **GigaVerbo**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **Tucano**, a series of decoder-transformers natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on GitHub and Hugging Face.
+
+## News
+
+- [29/11/2024] Tucano is mentioned on Deutsche Welle: "[Cientistas criam maior banco de dados em português para IA](https://www.dw.com/pt-br/pesquisadores-da-alemanha-criam-maior-banco-de-dados-p%C3%BAblico-em-portugu%C3%AAs-para-ia/a-70917082)".
+- [12/11/2024] "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)" is published as a preprint on ArXiv, with all models and datasets released on [Hugging Face](https://huggingface.co/TucanoBR).
+
+## Community Contributions 🤝
+
+- Demo on how to run inference on Tucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google..com/drive/1Qf2DsFOFDA7RKkamI-tH3OregtOlZ8Cz)
+
+- Demo on how to create a simple Chat UI for Tucano using Gradio 🚀 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fEW10CXksMfMv1veLr22OESwDs6e-W1b)
+
+- [Tucano OpenVINO](https://huggingface.co/cabelo/Tucano-2b4-Instruct-fp16-ov) is a ported version of Tucano-2b4-Instruct optimized for Intel openVINO inference technology.
 
 ## Reproducing
 
