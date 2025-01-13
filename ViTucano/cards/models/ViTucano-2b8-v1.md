@@ -68,7 +68,7 @@ The primary intended use of the ViTucano models is to serve as foundations for r
 from tinyllava.eval.run_tiny_llava import eval_model
 
 model_path = "TucanoBR/ViTucano-2b8-v1"
-prompt = "Quais são as coisas com as quais devo ter cuidado quando estiver aqui?"
+prompt = "Quais os principais elementos dessa imagem?"
 image_file = "https://raw.githubusercontent.com/Nkluge-correa/TinyLLaVA_Factory/refs/heads/main/assets/sample.jpg"
 conv_mode = "llama"
 
@@ -107,7 +107,7 @@ model = AutoModelForCausalLM.from_pretrained(
 model.to(device)
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
-prompt = "Quais são as coisas com as quais devo ter cuidado quando estiver aqui?"
+prompt = "Quais os principais elementos dessa imagem?"
 image_file="https://raw.githubusercontent.com/Nkluge-correa/TinyLLaVA_Factory/refs/heads/main/assets/sample.jpg"
 output_text, _ = model.chat(prompt=prompt, image=image_file, tokenizer=tokenizer)
 
