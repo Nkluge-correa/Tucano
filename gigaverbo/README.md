@@ -4,7 +4,8 @@ This folder contains the scripts used to download and process GigaVerbo, current
 
 - Split GigaVerbo into more managable chunks ([`split-gigaverbo.py`](./split-gigaverbo.py)).
 - Tokenize GigaVerbo ([`tokenize-gigaverbo.py`](./tokenize-gigaverbo.py)).
-- Shuffle the tokenized version of GigaVerbo ([`shuffle.py`](./shuffle.py))
+- Shuffle the tokenized version of GigaVerbo ([`shuffle.py`](./shuffle.py)).
+- Tokenization of the SFT dataset employs a prompt-masking technique to deduct the instruction portion of the input from the loss ([`tokenize-sft.py`](./tokenize-sft.py)).
 
 Here, you can also find a subfolder ([`/text-filter`](./text-filter/README.md)) with all the scripts used to train the filters (e.g., [`BERTimbau-base-text-filter`](./text-filter/train-BERT-classifier.py)) utilized to parse GigaVerbo.
 

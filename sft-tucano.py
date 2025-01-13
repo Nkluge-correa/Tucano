@@ -171,11 +171,14 @@ def main(specs, slurm_job_id, hardware):
     if args.sanity_check:
 
         # Create a list of tokens to be used for the sanity check
-        input_ids = [list(range(args.max_position_embeddings + 1))]  * 100000 # Need to ajust this ...
+        input_ids = [list(range(args.max_position_embeddings))]  * 100000
+        attention_mask = [[1] * (args.max_position_embeddings)] * 100000
         
         dataset = datasets.Dataset.from_dict(
             {
                 "input_ids": input_ids,
+                "attention_mask": attention_mask,
+                "labels": input_ids,
             }
         ).with_format("torch")
 

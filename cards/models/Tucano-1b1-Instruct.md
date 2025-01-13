@@ -413,7 +413,7 @@ To evaluate the `Instruct` versions of our models, we used [AlpacaEval](https://
 
 ## Cite as 🤗
 
-```latex
+```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
       title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},

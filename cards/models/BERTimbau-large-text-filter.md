@@ -54,7 +54,7 @@ result = classifier("Os tucanos são aves que correspondem à família Ramphasti
 
 ## Cite as 🤗
 
-```latex
+```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
       title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},

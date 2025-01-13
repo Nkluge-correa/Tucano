@@ -396,7 +396,7 @@ The table below compares our models against several Portuguese and multilingual 
 
 ## Cite as 🤗
 
-```latex
+```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
       title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},

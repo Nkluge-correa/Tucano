@@ -242,7 +242,7 @@ The following datasets and respective licenses from GigaVerbo (only training spl
 
 ### Citation Information
 
-```latex
+```bibtex
 
 @misc{correa2024tucanoadvancingneuraltext,
       title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 

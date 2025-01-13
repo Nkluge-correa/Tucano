@@ -61,21 +61,21 @@ def main(args):
         desc="Classifying dataset",
     )
 
-    os.makedirs(os.path.dirname(args.output_folder), exist_ok=True)
+    os.makedirs(args.output_folder, exist_ok=True)
 
-    indices = np.array_split(np.arange(len(d)), args.n_chunks)
-    chunks = [d.select(idx) for idx in indices]
+    indices = np.array_split(np.arange(len(dataset)), args.n_chunks)
+    chunks = [dataset.select(idx) for idx in indices]
 
     n = 0
     for chunk in chunks:
         n += len(chunk)
     
-    assert n == len(d), "The chunks are not of the expected length"
+    assert n == len(dataset), "The chunks are not of the expected length"
 
     # Save the chunks in disk
     for i, chunk in enumerate(chunks):
         chunk.to_json(
-            os.path.join(output_dir, f"chunk_{i}.jsonl"), 
+            os.path.join(args.output_folder, f"chunk_{i}.jsonl"), 
             num_proc=args.num_proc if args.num_proc else 1,
         )
 

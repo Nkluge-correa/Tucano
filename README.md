@@ -19,12 +19,17 @@
 
 To stimulate the future of open development of neural text generation in Portuguese, we present both **GigaVerbo**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **Tucano**, a series of decoder-transformers natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on GitHub and Hugging Face.
 
-## News
+## News 🚀
 
+- [13/01/2025] We release ViTucano, a pair of vision assistants natively pretrained in Portuguese ([ViTucano-1b5-v1](https://huggingface.co/TucanoBR/ViTucano-1b5-v1), [ViTucano-2b8-v1](https://huggingface.co/TucanoBR/ViTucano-2b8-v1)).
+- [13/01/2025] We release the datasets used to pretrain and fine-tune the ViTucano models: [ViTucano-Pretrain](https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain) and [ViTucano-SFT](https://huggingface.co/datasets/TucanoBR/ViTucano-SFT).
 - [29/11/2024] Tucano is mentioned on Deutsche Welle: "[Cientistas criam maior banco de dados em português para IA](https://www.dw.com/pt-br/pesquisadores-da-alemanha-criam-maior-banco-de-dados-p%C3%BAblico-em-portugu%C3%AAs-para-ia/a-70917082)".
+- [27/11/2024] Tucano video presentation at the C4AI (USP) [available on [YouTube](https://www.youtube.com/watch?v=BscOHn54ld8)].
 - [12/11/2024] "[Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)" is published as a preprint on ArXiv, with all models and datasets released on [Hugging Face](https://huggingface.co/TucanoBR).
 
 ## Community Contributions 🤝
+
+- Demo on how to run inference on ViTucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/110_Gtjgu4pldRQP864_Y-rSm2VhyW7Li)
 
 - Demo on how to run inference on Tucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google..com/drive/1Qf2DsFOFDA7RKkamI-tH3OregtOlZ8Cz)
 
@@ -116,7 +121,7 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ## Cite as 🤗
 
-```latex
+```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
       title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},

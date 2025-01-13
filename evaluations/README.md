@@ -106,7 +106,7 @@ To create the outputs of a model, use:
 
 - [`alpaca-eval-pt.py`](./alpaca-eval-pt.py). You can find an example output file [here](../logs/alpaca-evals/output-Tucano-2b4-Instruct.json).
 
-After you already have your output file (the reference file can be found [here](../logs/alpaca-evals/reference.json)), install `alpaca-eval`, set your OpenAI API key, and run the eval:
+After you already have your output file (the reference file can be found [here](../logs/alpaca-evals/references.json)), install `alpaca-eval`, set your OpenAI API key, and run the eval:
 
 ```bash
 pip3 install alpaca-eval

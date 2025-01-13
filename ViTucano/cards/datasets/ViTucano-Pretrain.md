@@ -1,0 +1,235 @@
+---
+dataset_info:
+  features:
+  - name: image
+    dtype: image
+  - name: id
+    dtype: string
+  - name: filepath
+    dtype: string
+  - name: conversations
+    list:
+    - name: from
+      dtype: string
+    - name: value
+      dtype: string
+  - name: blip_caption
+    dtype: string
+  - name: url
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 32275649949.488
+    num_examples: 558128
+  download_size: 27864965211
+  dataset_size: 32275649949.488
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+license: other
+language:
+- pt
+pretty_name: ViTucano-Pretrain
+task_categories:
+- image-to-text
+- text-generation
+size_categories:
+- 100K<n<1M
+---
+# ViTucano-Pretrain
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Dataset Description](#dataset-description)
+  - [Dataset Summary](#dataset-summary)
+  - [Supported Tasks and Leaderboards](#supported-tasks-and-leaderboards)
+  - [Languages](#languages)
+- [Dataset Structure](#dataset-structure)
+  - [Data Instances](#data-instances)
+  - [Data Fields](#data-fields)
+  - [Data Splits](#data-splits)
+- [Dataset Creation](#dataset-creation)
+  - [Curation Rationale](#curation-rationale)
+  - [Source Data](#source-data)
+  - [Annotations](#annotations)
+- [Considerations for Using the Data](#considerations-for-using-the-data)
+  - [Other Known Limitations](#other-known-limitations)
+- [Additional Information](#additional-information)
+  - [Dataset Curators](#dataset-curators)
+  - [Licensing Information](#licensing-information)
+  - [Citation Information](#citation-information)
+  - [Aknowlegments](#aknowlegments)
+  - [Contributions](#contributions)
+
+## Dataset Description
+
+- **Homepage:** https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain
+- **Repository:** https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain
+- **Paper:** [Tucano: Advancing Neural Text Generation for Portuguese](https://arxiv.org/abs/2411.07854)
+- **Point of Contact:** [Nk-correa](mailto:kluge@uni-bonn.de)
+
+### Dataset Summary
+
+ViTucano-Pretrain is a translation of the original [liuhaotian/LLaVA-Pretrain](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain), obtained via Google's translation API. LLaVA Visual Instruct Pretrain LCS-558K is a subset of the LAION/CC/SBU dataset, filtered with a more balanced concept coverage distribution. This dataset was used to train the **ViTucano**, our first attempt at creating a vision assistant natively pretrained in Portuguese. **ViTucano** is built on top of the [Tucano series](https://arxiv.org/abs/2411.07854) using the [TinyLLaVA Factory](https://arxiv.org/abs/2405.11788).
+
+### Supported Tasks and Leaderboards
+
+This dataset can be utilized for tasks involving language modeling and visual instruction tunning.
+
+### Languages
+
+Portuguese.
+
+## Dataset Structure
+
+### Data Instances
+
+The dataset consists of the following features:
+
+- **image:** a PIL image.
+- **id:** an identifier (name of the respective file) for that image.
+- **filepath:** the path to the file in the original folder configuration.
+- **conversations:** a list of dictionaries, where each dictionary represents a message or an entry in a conversation.
+- **blip_caption:** the original BLIP caption.
+- **url:** the url of the corresponding image.
+
+### Data Fields
+
+```python
+{
+    
+    "image": PIL.Image,
+    "id": "004539375",
+    "filepath": "train/00453/004539375.jpg",
+    "conversations": [
+        {
+            "from": "human",
+            "value": "Renderize um resumo claro e conciso da foto.\n<image>"
+        },
+        {
+            "from": "gpt",
+            "value": "Selecione móveis de luxo 3 - colchão de espuma de memória de gel de polegada"
+        }
+    ],
+    "blip_caption": "Selecione móveis de luxo 3 - colchão de espuma de memória de gel de polegada",
+    "url": "http://ec1.ostkcdn.com/images/products/8111140/P15459545.jpg"
+}
+```
+
+### Data Splits
+
+Available splits are `train`.
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("TucanoBR/ViTucano-Pretrain", split='train')
+
+# If you don't want to download the entire dataset, set streaming to `True`
+dataset = load_dataset("TucanoBR/ViTucano-Pretrain", split='train', streaming=True)
+
+```
+
+## Dataset Creation
+
+### Curation Rationale
+
+This dataset is a translation of the original [liuhaotian/LLaVA-Pretrain](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain) obtained via Google's translation API.
+
+### Source Data
+
+#### Who are the source language producers?
+
+All text samples translated from English to Portuguese.
+
+### Annotations
+
+#### Annotation process
+
+Read this [dataset card](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain) for more information.
+
+#### Who are the annotators?
+
+Read this [dataset card](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain) for more information.
+
+### Considerations for Using the Data
+
+**Warning:** This dataset may contain NSFW (Not Safe For Work) content, including explicit images and text captions with offensive/sensitive language.
+
+### Other Known Limitations
+
+This dataset has has been translated using translation engines, potentially resulting in corrupted samples. While useful for quickly converting text between languages, translation engines often struggle with accurately preserving the syntax, semantics, and context of certain languages.
+
+## Additional Information
+
+### Dataset Curators
+
+[Nicholas Kluge Corrêa](mailto:kluge@uni-bonn.de).
+
+### Licensing Information
+
+Users of this dataset must comply with license of [CC-3M](https://github.com/google-research-datasets/conceptual-captions/blob/master/LICENSE) and [BLIP](https://github.com/salesforce/BLIP/blob/main/LICENSE.txt) (if you use their synthetic caption).
+
+### Licensing Information
+
+Creative Commons Attribution 4.0 International; and it should abide by the [policy of OpenAI](https://openai.com/policies/terms-of-use).
+
+### Citation Information
+
+#### ViTucano
+
+```bibtex
+@misc{correa20204vitucano,
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    title={{ViTucano: A Portuguese Vision Assitant}},
+    year=2024,
+    howpublished = {\url{https://huggingface.co/TucanoBR}},
+}
+```
+
+#### Tucano
+
+```bibtex
+@misc{correa2024tucanoadvancingneuraltext,
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+      year={2024},
+      eprint={2411.07854},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07854}, 
+}
+```
+
+#### TinyLLaVA Factory
+
+```bibtex
+@article{jia2024tinyllava,
+  title={TinyLLaVA Factory: A Modularized Codebase for Small-scale Large Multimodal Models},
+  author={Jia, Junlong and Hu, Ying and Weng, Xi and Shi, Yiming and Li, Miao and Zhang, Xingjian and Zhou, Baichuan and Liu, Ziyu and Luo, Jie and Huang, Lei and Wu, Ji},
+  journal={arXiv preprint arXiv:2405.11788},
+  year={2024}
+}
+```
+
+#### LLaVA
+
+```bibtex
+@misc{liu2023llava,
+      title={Visual Instruction Tuning}, 
+      author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
+      publisher={NeurIPS},
+      year={2023},
+}
+```
+
+### Aknowlegments
+
+We gratefully acknowledge the granted access to the [Marvin cluster](https://www.hpc.uni-bonn.de/en/systems/marvin) hosted by [University of Bonn](https://www.uni-bonn.de/en) along with the support provided by its High Performance Computing \& Analytics Lab.
+
+### Contributions
+
+If you want to contribute, contact me at [kluge@uni-bonn.de](mailto:kluge@uni-bonn.de)!

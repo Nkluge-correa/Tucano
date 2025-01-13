@@ -43,7 +43,7 @@ gradient_checkpointing: false
 
 ################### Hub settings ###################
 push_to_hub: false
-hub_token: "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"
+hub_token: null
 hub_model_id: "TucanoBR/Tucano-2b4-Instruct"
 
 ################### Tokenizer settings ###################
