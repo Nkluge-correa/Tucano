@@ -14,7 +14,7 @@ library_name: transformers
 base_model:
 - TucanoBR/Tucano-2b4
 co2_eq_emissions:
-  emissions: 25000
+  emissions: 25460
   source: CodeCarbon
   geographical_location: Germany
   hardware_used: NVIDIA A40
@@ -39,8 +39,8 @@ co2_eq_emissions:
   - [ViTucano-SFT](https://huggingface.co/datasets/TucanoBR/ViTucano-SFT)
 - **Language:** Portuguese
 - **GPU:** 8 NVIDIA A40
-- **Training time**: ~ 23 hours
-- **Emissions:**  25 KgCO2 (Germany)
+- **Training time**: ~ 27 hours
+- **Emissions:**  25.4 KgCO2 (Germany)
 - **Total energy consumption:** 66 kWh
 
 This repository has the [source code](https://github.com/Nkluge-correa/TinyLLaVA_Factory) used to train this model.
