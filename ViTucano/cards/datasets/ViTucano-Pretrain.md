@@ -1,33 +1,4 @@
 ---
-dataset_info:
-  features:
-  - name: image
-    dtype: image
-  - name: id
-    dtype: string
-  - name: filepath
-    dtype: string
-  - name: conversations
-    list:
-    - name: from
-      dtype: string
-    - name: value
-      dtype: string
-  - name: blip_caption
-    dtype: string
-  - name: url
-    dtype: string
-  splits:
-  - name: train
-    num_bytes: 32275649949.488
-    num_examples: 558128
-  download_size: 27864965211
-  dataset_size: 32275649949.488
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data/train-*
 license: other
 language:
 - pt
@@ -37,6 +8,9 @@ task_categories:
 - text-generation
 size_categories:
 - 100K<n<1M
+viewer: false
+tags:
+- image-to-text
 ---
 # ViTucano-Pretrain
 
@@ -89,9 +63,8 @@ Portuguese.
 
 The dataset consists of the following features:
 
-- **image:** a PIL image.
 - **id:** an identifier (name of the respective file) for that image.
-- **filepath:** the path to the file in the original folder configuration.
+- **image:** the path to the file in the original folder configuration.
 - **conversations:** a list of dictionaries, where each dictionary represents a message or an entry in a conversation.
 - **blip_caption:** the original BLIP caption.
 - **url:** the url of the corresponding image.
@@ -100,10 +73,8 @@ The dataset consists of the following features:
 
 ```python
 {
-    
-    "image": PIL.Image,
     "id": "004539375",
-    "filepath": "train/00453/004539375.jpg",
+    "image": "train/00453/004539375.jpg",
     "conversations": [
         {
             "from": "human",
@@ -123,15 +94,32 @@ The dataset consists of the following features:
 
 Available splits are `train`.
 
-```python
-from datasets import load_dataset
+To use this dataset, you will need to download both the `data-pretraining.json` and `images.zip` files available in this folder:
 
-dataset = load_dataset("TucanoBR/ViTucano-Pretrain", split='train')
-
-# If you don't want to download the entire dataset, set streaming to `True`
-dataset = load_dataset("TucanoBR/ViTucano-Pretrain", split='train', streaming=True)
-
+```bash
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/data-pretraining.json
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/images.zip
 ```
+
+You can also do this via the `huggingface_hub` library:
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id="ViTucano-Pretrain", repo_type="dataset")
+```
+
+Unzip the images in a way that you get this folder structure (e.g., `unzip images.zip -d "path/to/train"`):
+
+```bash
+├── train
+    ├── 00000
+    ├── 00001
+    ├── 00002
+    └── etc ...
+```
+
+Done! The data is ready to train your projector.
 
 ## Dataset Creation
 
@@ -172,8 +160,6 @@ This dataset has has been translated using translation engines, potentially resu
 ### Licensing Information
 
 Users of this dataset must comply with license of [CC-3M](https://github.com/google-research-datasets/conceptual-captions/blob/master/LICENSE) and [BLIP](https://github.com/salesforce/BLIP/blob/main/LICENSE.txt) (if you use their synthetic caption).
-
-### Licensing Information
 
 Creative Commons Attribution 4.0 International; and it should abide by the [policy of OpenAI](https://openai.com/policies/terms-of-use).
 

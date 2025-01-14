@@ -1,31 +1,4 @@
 ---
-dataset_info:
-  features:
-  - name: image
-    dtype: image
-  - name: id
-    dtype: string
-  - name: filepath
-    dtype: string
-  - name: conversations
-    list:
-    - name: from
-      dtype: string
-    - name: value
-      dtype: string
-  - name: partition
-    dtype: string
-  splits:
-  - name: train
-    num_bytes: 9795607051.054
-    num_examples: 185282
-  download_size: 16004626311
-  dataset_size: 9795607051.054
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data/train-*
 license: other
 task_categories:
 - image-to-text
@@ -35,6 +8,9 @@ language:
 pretty_name: ViTucano-SFT
 size_categories:
 - 100K<n<1M
+viewer: false
+tags:
+- image-to-text
 ---
 # ViTucano-SFT
 
@@ -86,9 +62,8 @@ Portuguese.
 
 The dataset consists of the following features:
 
-- **image:** a PIL image.
+- **image:** the path to the file in the original folder configuration.
 - **id:** an identifier (name of the respective file) for that image.
-- **filepath:** the path to the file in the original folder configuration.
 - **conversations:** a list of dictionaries, where each dictionary represents a message or an entry in a conversation.
 - **partition:** the original dataset that this sample comes from (e.g., coco, gqa, or coco-captions-pt-br).
 
@@ -97,8 +72,7 @@ The dataset consists of the following features:
 ```python
 {
     "id": "000000444448",
-    "image": PIL.Image,
-    "filepath": "train/coco/000000444448.jpg",
+    "image": "train/coco_1/000000444448.jpg",
     "conversations": [
       {
         "from": "human",
@@ -109,7 +83,7 @@ The dataset consists of the following features:
         "value": "Na imagem, uma mulher está pintando o hidrante em uma calçada."
       }
     ],
-    "partition": "coco"
+    "partition": "coco_1"
 }
 ```
 
@@ -117,15 +91,35 @@ The dataset consists of the following features:
 
 Available splits are `train`.
 
-```python
-from datasets import load_dataset
+To use this dataset, you will need to download both the `data-sft.json` file and all corresponding zip files available in this folder (`coco_1.zip`, `coco_2.zip`, `coco-captions-pt-br.zip`, and `gqa.zip` ):
 
-dataset = load_dataset("TucanoBR/ViTucano-SFT", split='train')
-
-# If you don't want to download the entire dataset, set streaming to `True`
-dataset = load_dataset("TucanoBR/ViTucano-SFT", split='train', streaming=True)
-
+```bash
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/data-sft.json
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/coco_1.zip
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/coco_2.zip
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/coco-captions-pt-br.zip
+wget https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain/resolve/main/gqa.zip
 ```
+
+You can also do this via the `huggingface_hub` library:
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id="ViTucano-SFT", repo_type="dataset")
+```
+
+Unzip the images in a way that you get this folder structure (e.g., `unzip coco_1.zip -d "path/to/train"`):
+
+```bash
+├── train
+    ├── coco_1
+    ├── coco_2
+    ├── coco-captions-pt-br
+    └── gqa
+```
+
+Done! The data is ready to fine-tune your visual assitant.
 
 ## Dataset Creation
 
