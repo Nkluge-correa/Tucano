@@ -20,9 +20,9 @@ widget:
 inference:
   parameters:
     repetition_penalty: 1.2
-    temperature: 0.2
-    top_k: 20
-    top_p: 0.2
+    temperature: 0.1
+    top_k: 50
+    top_p: 1.0
     max_new_tokens: 150
 co2_eq_emissions:
   emissions: 4475000
@@ -336,9 +336,9 @@ generation_config = GenerationConfig(
     "max_new_tokens": 2048,
     "renormalize_logits": True,
     "repetition_penalty": 1.2,
-    "temperature": 0.3,
-    "top_k": 30,
-    "top_p": 0.3,
+    "temperature": 0.1,
+    "top_k": 50,
+    "top_p": 1.0,
     "use_cache": True, 
   }
 )
