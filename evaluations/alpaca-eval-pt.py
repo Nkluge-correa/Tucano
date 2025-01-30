@@ -14,11 +14,14 @@ def main(args):
     torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = True
 
     # Load tokenizer and model
-    tokenizer = AutoTokenizer.from_pretrained(args.model_id)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_id, revision=args.revision, token=args.token, cache_dir=args.cache_dir)
     model = AutoModelForCausalLM.from_pretrained(
         args.model_id,
         attn_implementation=args.attn_implementation,
-        torch_dtype=torch.bfloat16 if args.precision == "bfloat16" else torch.float32
+        torch_dtype=torch.bfloat16 if args.precision == "bfloat16" else torch.float32,
+        revision=args.revision,
+        token=args.token,
+        cache_dir=args.cache_dir,
     )
 
     # Set up generation configuration
@@ -33,18 +36,25 @@ def main(args):
 
     # Set up device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    generator = TextGenerationPipeline(model=model, task="text-generation", tokenizer=tokenizer, device=device)
+    generator = TextGenerationPipeline(model=model, task="text-generation", 
+                                       tokenizer=tokenizer, device=device)
 
     # Load evaluation dataset
-    eval_set = load_dataset("TucanoBR/alpaca-eval-pt", split="eval")
-    eval_set = eval_set.remove_columns(["output", "generator"])
+    eval_set = load_dataset("TucanoBR/alpaca-eval-pt", split="eval", cache_dir=args.cache_dir)
+    eval_set = eval_set.remove_columns(["output", "generator"]) # These columns are not required for evaluation
+    samples = eval_set['instruction'] # Get instruction samples
 
     # Generate outputs
     outputs = []
-    for example in tqdm.tqdm(eval_set):
-        prompt = f"<instruction>{example['instruction']}</instruction>" if args.is_tucano else example['instruction']
-        completion = generator(prompt, generation_config=generation_config)
-        outputs.append(completion[0]['generated_text'][len(prompt):])
+    
+    for i in tqdm.tqdm(range(0, len(samples), args.batch_size)):
+        batch = samples[i:i + args.batch_size]
+        batch = [f"{args.systems}{args.prompt_1}{sample}{args.prompt_2}" for sample in batch]
+
+        completions = generator(batch, generation_config=generation_config)
+
+        for sample, completion in zip(batch, completions):
+            outputs.append(completion[0]['generated_text'][len(sample):])
 
     # Add output and generator columns to dataset and save
     generator_names = [args.model_id.split('/')[-1]] * len(outputs)
@@ -52,35 +62,35 @@ def main(args):
     eval_set = eval_set.add_column("generator", generator_names)
     output_file = os.path.join(args.output_folder, f"alpaca-eval-pt-{args.model_id.split('/')[-1]}.json")
     data = [sample for sample in eval_set]
+
     with open(output_file, 'w') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+
+        try:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Error: {e}")
+            json.dump(data, f, ensure_ascii=True, indent=2)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run a text generation model evaluation.")
     parser.add_argument("--model_id", type=str, default="TucanoBR/Tucano-2b4-Instruct", help="Model identifier")
+    parser.add_argument("--revision", type=str, default="main", help="Model revision")
+    parser.add_argument("--token", type=str, default=None, help="Hugging Face API token")
+    parser.add_argument("--cache_dir", type=str, default="./cache", help="Cache directory")
     parser.add_argument("--attn_implementation", type=str, default="flash_attention_2", help="Attention implementation")
     parser.add_argument("--precision", type=str, choices=["bfloat16", "float16"], default="bfloat16", help="Precision type")
     parser.add_argument("--max_new_tokens", type=int, default=2048, help="Maximum number of new tokens to generate")
     parser.add_argument("--do_sample", type=bool, default=True, help="Whether to use sampling for generation")
     parser.add_argument("--repetition_penalty", type=float, default=1.2, help="Penalty for token repetition")
     parser.add_argument("--temperature", type=float, default=0.1, help="Temperature for generation")
-    parser.add_argument("--top_k", type=int, default=10, help="Top-k filtering for generation")
-    parser.add_argument("--top_p", type=float, default=0.1, help="Top-p (nucleus) sampling for generation")
+    parser.add_argument("--top_k", type=int, default=50, help="Top-k filtering for generation")
+    parser.add_argument("--top_p", type=float, default=1.0, help="Top-p (nucleus) sampling for generation")
     parser.add_argument("--output_folder", type=str, default="outputs", help="Folder to save generated outputs")
-    parser.add_argument("--is_tucano", type=bool, default=True, help="Use Tucano-specific prompt formatting")
+    parser.add_argument("--batch_size", type=int, default=8, help="Batch size for generation")
+    parser.add_argument("--systems", type=str, default="", help="Systems prompt")
+    parser.add_argument("--prompt_1", type=str, default="<instruction>", help="Prompt 1")
+    parser.add_argument("--prompt_2", type=str, default="</instruction>", help="Prompt 2")
 
     args = parser.parse_args()
     os.makedirs(args.output_folder, exist_ok=True)
     main(args)
-
-# python alpaca-eval-pt.py \
-#     --model_id TucanoBR/Tucano-2b4-Instruct \
-#     --attn_implementation flash_attention_2 \
-#     --precision bfloat16 \
-#     --max_new_tokens 2048 \
-#     --do_sample True \
-#     --repetition_penalty 1.2 \
-#     --temperature 0.1 \
-#     --top_k 10 \
-#     --top_p 0.1 \
-#     --output_folder path/to/folder \
