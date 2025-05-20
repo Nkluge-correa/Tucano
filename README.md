@@ -11,6 +11,9 @@
 <a href="https://github.com/Nkluge-correa/Tucano/blob/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/License-Apache-002776.svg" alt="License: Apache 2.0">
 </a>
+<a href="https://doi.org/10.5281/zenodo.15471165">
+  <img src="https://zenodo.org/badge/885940738.svg" alt="DOI">
+</a>
 
 </div>
 <p align="center">
