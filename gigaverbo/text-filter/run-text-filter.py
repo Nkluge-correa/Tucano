@@ -23,7 +23,17 @@ def main(args):
     model.to(device)
 
     # Load the dataset (expected to be a dataset of json files)
-    dataset_files = sorted([os.path.join(args.directory_path, f) for f in os.listdir(args.directory_path) if f.endswith(".jsonl")], key=lambda x: int(x.split("_")[-1].split(".")[0]))
+    if os.path.isdir(args.directory_path) and args.file_path is None:
+        print("Loading dataset from directory: ", args.directory_path)
+        dataset_files = sorted([os.path.join(args.directory_path, f) for f in os.listdir(args.directory_path) if f.endswith(".jsonl")], key=lambda x: int(x.split("_")[-1].split(".")[0]))
+
+    elif args.file_path is not None and os.path.isfile(args.file_path):
+        print("Loading dataset from file: ", args.file_path)
+        dataset_files = [args.file_path]
+        args.n_chunks = len(dataset_files)
+
+    else:
+        raise ValueError("The dataset path is not valid.")
 
     dataset = load_dataset(
         "json",
@@ -51,7 +61,7 @@ def main(args):
         labels = [int(np.argmax(logit)) for logit in logits]
         scores = [float(np.max(torch.softmax(torch.tensor(logit), dim=-1).numpy())) for logit in logits]
 
-        return {"label": labels, "probs": scores}
+        return {"bertimbau_label": labels, "bertimbau_confidence": scores}
     
     dataset = dataset.map(
         foo,
@@ -75,7 +85,7 @@ def main(args):
     # Save the chunks in disk
     for i, chunk in enumerate(chunks):
         chunk.to_json(
-            os.path.join(args.output_folder, f"chunk_{i}.jsonl"), 
+            os.path.join(args.output_folder, dataset_files[i].split("/")[-1]), 
             num_proc=args.num_proc if args.num_proc else 1,
         )
 
@@ -86,6 +96,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--model_name", type=str, required=True, help="The name of the model to be used.")
     parser.add_argument("--directory_path", type=str, required=True, help="The path to the directory containing the dataset.")
+    parser.add_argument("--file_path", type=str, default=None, help="The path to the file containing the dataset.")
     parser.add_argument("--token", type=str, default=None, help="The token to access the dataset.")
     parser.add_argument("--cache_dir", type=str, default="/tmp", help="The directory to store the dataset.")
     parser.add_argument("--text_column", type=str, default="text", help="The name of the text column in the dataset.")

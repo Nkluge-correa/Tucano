@@ -11,6 +11,9 @@
 <a href="https://github.com/Nkluge-correa/Tucano/blob/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/License-Apache-002776.svg" alt="License: Apache 2.0">
 </a>
+<a href="https://doi.org/10.5281/zenodo.15471165">
+  <img src="https://zenodo.org/badge/885940738.svg" alt="DOI">
+</a>
 
 </div>
 <p align="center">
@@ -31,7 +34,7 @@ To stimulate the future of open development of neural text generation in Portugu
 
 - Demo on how to run inference on ViTucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/110_Gtjgu4pldRQP864_Y-rSm2VhyW7Li)
 
-- Demo on how to run inference on Tucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google..com/drive/1Qf2DsFOFDA7RKkamI-tH3OregtOlZ8Cz)
+- Demo on how to run inference on Tucano 👉 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Qf2DsFOFDA7RKkamI-tH3OregtOlZ8Cz)
 
 - Demo on how to create a simple Chat UI for Tucano using Gradio 🚀 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fEW10CXksMfMv1veLr22OESwDs6e-W1b)
 
