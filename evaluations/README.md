@@ -2,22 +2,22 @@
 
 During training, we saved checkpoints for each model between an interval of $\approx$ 10.5 billion tokens. For every checkpoint, we ran the following harness of evaluation benchmarks:
 
-| **Benchmark**     | **n-shot** | **Origin**   | **Type**              | **Metric**        |
-|-------------------|------------|--------------|-----------------------|-------------------|
-| ENEM              | 3-shot     | Native       | Q&A                   | `acc`             |
-| BLUEX             | 3-shot     | Native       | Q&A                   | `acc`             |
-| OAB Exams         | 3-shot     | Native       | Q&A                   | `acc`             |
-| ASSIN2 RTE        | 15-shot    | Native       | Entailment            | `f1 macro`        |
-| ASSIN2 STS        | 10-shot    | Native       | Similarity            | `pearson`         |
-| FAQUAD NLI        | 15-shot    | Native       | Entailment            | `f1 macro`        |
-| HateBR            | 25-shot    | Native       | Classification        | `f1 macro`        |
-| PT Hate Speech    | 25-shot    | Native       | Classification        | `f1 macro`        |
-| TweetSentBR       | 25-shot    | Native       | Classification        | `f1 macro`        |
-| CALAME-PT         | 0-shot     | Native       | Next Word Prediction  | `acc`             |
-| ARC-Challenge     | 25-shot    | Translated   | Q&A                   | `acc norm`        |
-| HellaSwag         | 10-shot    | Translated   | Q&A                   | `acc norm`        |
-| TruthfulQA        | 0-shot     | Translated   | Q&A                   | `bleurt`          |
-| LAMBADA           | 0-shot     | Translated   | Next Word Prediction  | `acc`             |
+| **Benchmark**  | **n-shot** | **Origin** | **Type**             | **Metric** |
+| -------------- | ---------- | ---------- | -------------------- | ---------- |
+| ENEM           | 3-shot     | Native     | Q&A                  | `acc`      |
+| BLUEX          | 3-shot     | Native     | Q&A                  | `acc`      |
+| OAB Exams      | 3-shot     | Native     | Q&A                  | `acc`      |
+| ASSIN2 RTE     | 15-shot    | Native     | Entailment           | `f1 macro` |
+| ASSIN2 STS     | 10-shot    | Native     | Similarity           | `pearson`  |
+| FAQUAD NLI     | 15-shot    | Native     | Entailment           | `f1 macro` |
+| HateBR         | 25-shot    | Native     | Classification       | `f1 macro` |
+| PT Hate Speech | 25-shot    | Native     | Classification       | `f1 macro` |
+| TweetSentBR    | 25-shot    | Native     | Classification       | `f1 macro` |
+| CALAME-PT      | 0-shot     | Native     | Next Word Prediction | `acc`      |
+| ARC-Challenge  | 25-shot    | Translated | Q&A                  | `acc norm` |
+| HellaSwag      | 10-shot    | Translated | Q&A                  | `acc norm` |
+| TruthfulQA     | 0-shot     | Translated | Q&A                  | `bleurt`   |
+| LAMBADA        | 0-shot     | Translated | Next Word Prediction | `acc`      |
 
 For CALAME-PT and LAMBADA-PT, the scripts used to run evaluations are:
 
@@ -32,7 +32,7 @@ Other evaluations are performed by using either the [NLP-UOregon](https://github
 The table below brings a comparison of the above-cited benchmark evaluations on several Portuguese and multilingual language models:
 
 |                 | Average | Calame-PT | Lambada-PT | Enem  | Bluex | OAB Exams | Assin2 RTE | Assin2 STS | FAQUAD-NLI | HateBR | HateSpeech-PT | TweetBR | ARC-PT | HellaSwag-PT | TruthfulQA-PT |
-|-----------------|---------|-----------|------------|-------|-------|-----------|------------|------------|------------|--------|---------------|---------|--------|--------------|---------------|
+| --------------- | ------- | --------- | ---------- | ----- | ----- | --------- | ---------- | ---------- | ---------- | ------ | ------------- | ------- | ------ | ------------ | ------------- |
 | Granite-3.0-2b  | 54.9    | 56.36     | 47.55      | 54.51 | 45.2  | 40.46     | 83.72      | 60.46      | 43.97      | 55.81  | 68.12         | 67.6    | 42.56  | 60.05        | 42.23         |
 | Llama-3.2-3B    | 52.38   | 58.43     | 49.1       | 53.04 | 50.35 | 39.45     | 83.64      | 33.19      | 43.97      | 74.58  | 41.99         | 61.43   | 43.25  | 57.2         | 43.64         |
 | Gemma-2-2b      | 48.47   | 56.7      | 47.1       | 49.34 | 40.47 | 35.54     | 76.17      | 36.04      | 44.71      | 65.08  | 58.31         | 66.75   | 24.19  | 28.85        | 49.38         |
@@ -71,28 +71,20 @@ All benchmarks used in our Portuguese MTEB evaluation are listed below:
 - [MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages](https://arxiv.org/abs/2204.08582)
   - `mteb/amazon_massive_intent`
   - `mteb/amazon_massive_scenario`
-  
 - [MultiHate Classification Dataset for Hate Speech Detection](https://aclanthology.org/2022.woah-1.15/)
   - `mteb/multi-hatecheck`
-  
 - [SIB-200 Topic Classification Dataset](https://arxiv.org/abs/2309.07445)
   - `mteb/sib200`
-  
 - [Multilingual Tweet Sentiment Analysis Dataset](https://aclanthology.org/2022.lrec-1.27)
   - `mteb/tweet_sentiment_multilingual`
-  
 - [Hate Speech Portuguese Classification Dataset](https://aclanthology.org/W19-3510)
   - `hate-speech-portuguese/hate_speech_portuguese`
-  
 - [Mintaka: Multilingual Question-Answering Dataset](https://aclanthology.org/2022.coling-1.138)
   - `jinaai/mintakaqa`
-  
 - [Wikipedia Retrieval Multilingual Dataset](https://huggingface.co/datasets/ellamind/wikipedia-2023-11-retrieval-multilingual-queries)
   - `ellamind/wikipedia-2023-11-retrieval-multilingual-queries`
-  
 - [ASSIN 2: Recognizing Textual Entailment and Semantic Textual Similarity Dataset](https://link.springer.com/chapter/10.1007/978-3-030-41505-1_39)
   - `nilc-nlp/assin2` (for both RTE and STS tasks)
-  
 - [STS Benchmark Multilingual - STS Benchmark Dataset Translated](https://github.com/PhilipMay/stsb-multi-mt/)
   - `mteb/stsb_multi_mt`
 
@@ -118,7 +110,7 @@ alpaca_eval --model_outputs="/logs/alpaca-evals/output-Tucano-2b4-Instruct.json"
 The table below provides comparisons for our evaluation:
 
 |                          | Win Rate (%) | Std. Error | Avg. Length | Wins | Base Wins | Draws | Total Matches | Discrete Win Rate (%) | Length-Controlled Win Rate (%) | LC Std. Error |
-|--------------------------|--------------|------------|-------------|------|-----------|-------|---------------|-----------------------|--------------------------------|---------------|
+| ------------------------ | ------------ | ---------- | ----------- | ---- | --------- | ----- | ------------- | --------------------- | ------------------------------ | ------------- |
 | Llama-3.2-3B-Instruct    | 31.81        | 1.46       | 1609        | 257  | 548       | 0     | 805           | 31.92                 | 21.06                          | 0.075         |
 | **Tucano-2b4-Instruct**  | 18.90        | 1.23       | 1843        | 151  | 654       | 0     | 805           | 18.75                 | 13.00                          | 0.071         |
 | **Tucano-1b1-Instruct**  | 15.41        | 1.16       | 1667        | 124  | 681       | 0     | 805           | 15.40                 | 8.80                           | 0.083         |
@@ -126,3 +118,10 @@ The table below provides comparisons for our evaluation:
 | TeenyTinyLlama-460m-Chat | 4.07         | 0.61       | 1333        | 28   | 777       | 0     | 805           | 3.47                  | 2.84                           | 0.059         |
 | Sabiá-7b                 | 0.23         | 0.10       | 5011        | 1    | 804       | 0     | 805           | 0.12                  | 0.076                          | 0.0043        |
 | Gervásio-7b              | 0.076        | 0.06       | 5740        | 1    | 804       | 0     | 805           | 0.12                  | 0.026                          | 0.0016        |
+
+## Colab Examples
+
+- Learn how to run the evaluations using the [`LM-Evaluation-Harness`](https://github.com/EleutherAI/lm-evaluation-harness) (English) here 👉 <a href="https://colab.research.google.com/drive/1FvcrJRyc1fv8jS-g-OkT_tsBrKe3DfCX" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>.
+- Learn how to run the evaluations using a fork of the [`LM-Evaluation-Harness`](https://github.com/EleutherAI/lm-evaluation-harness) (Multilingual) here 👉 <a href="https://colab.research.google.com/drive/1mspcStRItqKzLZ39PG-ztKJXCqSvlEKt" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>.
+- Learn how to run the evaluations using a fork of the [`LM-Evaluation-Harness`](https://github.com/EleutherAI/lm-evaluation-harness) (Portuguese) here 👉 <a href="https://colab.research.google.com/drive/1m6Oqey4P9ShYTO62yRq7wrM_eEsvFJ9D" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>.
+- Learn how to run the Alpaca-Eval (Portuguese) here 👉 <a href="https://colab.research.google.com/drive/1jUszJNk7ik0CTUZD_dzxvnN_YsoxcPky" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>.
