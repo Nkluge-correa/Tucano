@@ -1,17 +1,18 @@
 ---
 license: other
 task_categories:
-- image-to-text
-- text-generation
+  - image-to-text
+  - text-generation
 language:
-- pt
+  - pt
 pretty_name: ViTucano-SFT
 size_categories:
-- 100K<n<1M
+  - 100K<n<1M
 viewer: false
 tags:
-- image-to-text
+  - image-to-text
 ---
+
 # ViTucano-SFT
 
 ## Table of Contents
@@ -176,13 +177,24 @@ Creative Commons Attribution 4.0 International; and it should abide by the [poli
 
 ```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 ```
 
@@ -201,7 +213,7 @@ Creative Commons Attribution 4.0 International; and it should abide by the [poli
 
 ```bibtex
 @misc{liu2023llava,
-      title={Visual Instruction Tuning}, 
+      title={Visual Instruction Tuning},
       author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
       publisher={NeurIPS},
       year={2023},

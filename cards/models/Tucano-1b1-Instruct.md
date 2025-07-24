@@ -1,27 +1,27 @@
 ---
 language:
-- pt
+  - pt
 license: apache-2.0
 library_name: transformers
 tags:
-- text-generation-inference
+  - text-generation-inference
 datasets:
-- nicholasKluge/instruct-aira-dataset-v3
-- cnmoro/GPT4-500k-Augmented-PTBR-Clean
-- rhaymison/orca-math-portuguese-64k
-- nicholasKluge/reward-aira-dataset
+  - nicholasKluge/instruct-aira-dataset-v3
+  - cnmoro/GPT4-500k-Augmented-PTBR-Clean
+  - rhaymison/orca-math-portuguese-64k
+  - nicholasKluge/reward-aira-dataset
 metrics:
-- perplexity
+  - perplexity
 pipeline_tag: text-generation
 widget:
-- text: "<instruction>Cite algumas bandas de rock brasileiras famosas.</instruction>"
-  example_title: Exemplo
-- text: "<instruction>Invente uma história sobre um encanador com poderes mágicos.</instruction>"
-  example_title: Exemplo
-- text: "<instruction>Qual cidade é a capital do estado do Rio Grande do Sul?</instruction>"
-  example_title: Exemplo
-- text: "<instruction>Diga o nome de uma maravilha culinária característica da cosinha Portuguesa?</instruction>"
-  example_title: Exemplo
+  - text: "<instruction>Cite algumas bandas de rock brasileiras famosas.</instruction>"
+    example_title: Exemplo
+  - text: "<instruction>Invente uma história sobre um encanador com poderes mágicos.</instruction>"
+    example_title: Exemplo
+  - text: "<instruction>Qual cidade é a capital do estado do Rio Grande do Sul?</instruction>"
+    example_title: Exemplo
+  - text: "<instruction>Diga o nome de uma maravilha culinária característica da cosinha Portuguesa?</instruction>"
+    example_title: Exemplo
 inference:
   parameters:
     repetition_penalty: 1.2
@@ -36,247 +36,248 @@ co2_eq_emissions:
   geographical_location: Germany
   hardware_used: NVIDIA A100-SXM4-80GB
 model-index:
-- name: Tucano-1b1-Instruct
-  results:
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: CALAME-PT
-      type: NOVA-vision-language/calame-pt
-      split: all
-      args:
-        num_few_shot: 0
-    metrics:
-    - type: acc
-      value: 56.55
-      name: accuracy
-    source:
-      url: https://huggingface.co/datasets/NOVA-vision-language/calame-pt
-      name: Context-Aware LAnguage Modeling Evaluation for Portuguese
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: LAMBADA-PT
-      type: TucanoBR/lambada-pt
-      split: train
-      args:
-        num_few_shot: 0
-    metrics:
-    - type: acc
-      value: 35.53
-      name: accuracy
-    source:
-      url: https://huggingface.co/datasets/TucanoBR/lambada-pt
-      name: LAMBADA-PT
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: ENEM Challenge (No Images)
-      type: eduagarcia/enem_challenge
-      split: train
-      args:
-        num_few_shot: 3
-    metrics:
-    - type: acc
-      value: 21.06
-      name: accuracy
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: BLUEX (No Images)
-      type: eduagarcia-temp/BLUEX_without_images
-      split: train
-      args:
-        num_few_shot: 3
-    metrics:
-    - type: acc
-      value: 26.01
-      name: accuracy
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: OAB Exams
-      type: eduagarcia/oab_exams
-      split: train
-      args:
-        num_few_shot: 3
-    metrics:
-    - type: acc
-      value: 26.47
-      name: accuracy
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: Assin2 RTE
-      type: assin2
-      split: test
-      args:
-        num_few_shot: 15
-    metrics:
-    - type: f1_macro
-      value: 67.78
-      name: f1-macro
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: Assin2 STS
-      type: eduagarcia/portuguese_benchmark
-      split: test
-      args:
-        num_few_shot: 10
-    metrics:
-    - type: pearson
-      value: 8.88
-      name: pearson
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: FaQuAD NLI
-      type: ruanchaves/faquad-nli
-      split: test
-      args:
-        num_few_shot: 15
-    metrics:
-    - type: f1_macro
-      value: 43.97
-      name: f1-macro
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: HateBR Binary
-      type: ruanchaves/hatebr
-      split: test
-      args:
-        num_few_shot: 25
-    metrics:
-    - type: f1_macro
-      value: 31.28
-      name: f1-macro
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: PT Hate Speech Binary
-      type: hate_speech_portuguese
-      split: test
-      args:
-        num_few_shot: 25
-    metrics:
-    - type: f1_macro
-      value: 41.23
-      name: f1-macro
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: tweetSentBR
-      type: eduagarcia-temp/tweetsentbr
-      split: test
-      args:
-        num_few_shot: 25
-    metrics:
-    - type: f1_macro
-      value: 22.03
-      name: f1-macro
-    source:
-      url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
-      name: Open Portuguese LLM Leaderboard
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: ARC-Challenge (PT)
-      type: arc_pt
-      args:
-        num_few_shot: 25
-    metrics:
-    - type: acc_norm
-      value: 30.77
-      name: normalized accuracy
-    source:
-      url: https://github.com/nlp-uoregon/mlmm-evaluation
-      name: Evaluation Framework for Multilingual Large Language Models
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: HellaSwag (PT)
-      type: hellaswag_pt
-      args:
-        num_few_shot: 10
-    metrics:
-    - type: acc_norm
-      value: 43.50
-      name: normalized accuracy
-    source:
-      url: https://github.com/nlp-uoregon/mlmm-evaluation
-      name: Evaluation Framework for Multilingual Large Language Models
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: TruthfulQA (PT)
-      type: truthfulqa_pt
-      args:
-        num_few_shot: 0
-    metrics:
-    - type: mc2
-      value: 41.14
-      name: bleurt
-    source:
-      url: https://github.com/nlp-uoregon/mlmm-evaluation
-      name: Evaluation Framework for Multilingual Large Language Models
-  - task:
-      type: text-generation
-      name: Text Generation
-    dataset:
-      name: Alpaca-Eval (PT)
-      type: alpaca_eval_pt
-      args:
-        num_few_shot: 0
-    metrics:
-    - type: lc_winrate
-      value: 8.80
-      name: length controlled winrate
-    source:
-      url: https://github.com/tatsu-lab/alpaca_eval
-      name: AlpacaEval
+  - name: Tucano-1b1-Instruct
+    results:
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: CALAME-PT
+          type: NOVA-vision-language/calame-pt
+          split: all
+          args:
+            num_few_shot: 0
+        metrics:
+          - type: acc
+            value: 56.55
+            name: accuracy
+        source:
+          url: https://huggingface.co/datasets/NOVA-vision-language/calame-pt
+          name: Context-Aware LAnguage Modeling Evaluation for Portuguese
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: LAMBADA-PT
+          type: TucanoBR/lambada-pt
+          split: train
+          args:
+            num_few_shot: 0
+        metrics:
+          - type: acc
+            value: 35.53
+            name: accuracy
+        source:
+          url: https://huggingface.co/datasets/TucanoBR/lambada-pt
+          name: LAMBADA-PT
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: ENEM Challenge (No Images)
+          type: eduagarcia/enem_challenge
+          split: train
+          args:
+            num_few_shot: 3
+        metrics:
+          - type: acc
+            value: 21.06
+            name: accuracy
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: BLUEX (No Images)
+          type: eduagarcia-temp/BLUEX_without_images
+          split: train
+          args:
+            num_few_shot: 3
+        metrics:
+          - type: acc
+            value: 26.01
+            name: accuracy
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: OAB Exams
+          type: eduagarcia/oab_exams
+          split: train
+          args:
+            num_few_shot: 3
+        metrics:
+          - type: acc
+            value: 26.47
+            name: accuracy
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: Assin2 RTE
+          type: assin2
+          split: test
+          args:
+            num_few_shot: 15
+        metrics:
+          - type: f1_macro
+            value: 67.78
+            name: f1-macro
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: Assin2 STS
+          type: eduagarcia/portuguese_benchmark
+          split: test
+          args:
+            num_few_shot: 10
+        metrics:
+          - type: pearson
+            value: 8.88
+            name: pearson
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: FaQuAD NLI
+          type: ruanchaves/faquad-nli
+          split: test
+          args:
+            num_few_shot: 15
+        metrics:
+          - type: f1_macro
+            value: 43.97
+            name: f1-macro
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: HateBR Binary
+          type: ruanchaves/hatebr
+          split: test
+          args:
+            num_few_shot: 25
+        metrics:
+          - type: f1_macro
+            value: 31.28
+            name: f1-macro
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: PT Hate Speech Binary
+          type: hate_speech_portuguese
+          split: test
+          args:
+            num_few_shot: 25
+        metrics:
+          - type: f1_macro
+            value: 41.23
+            name: f1-macro
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: tweetSentBR
+          type: eduagarcia-temp/tweetsentbr
+          split: test
+          args:
+            num_few_shot: 25
+        metrics:
+          - type: f1_macro
+            value: 22.03
+            name: f1-macro
+        source:
+          url: https://huggingface.co/spaces/eduagarcia/open_pt_llm_leaderboard
+          name: Open Portuguese LLM Leaderboard
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: ARC-Challenge (PT)
+          type: arc_pt
+          args:
+            num_few_shot: 25
+        metrics:
+          - type: acc_norm
+            value: 30.77
+            name: normalized accuracy
+        source:
+          url: https://github.com/nlp-uoregon/mlmm-evaluation
+          name: Evaluation Framework for Multilingual Large Language Models
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: HellaSwag (PT)
+          type: hellaswag_pt
+          args:
+            num_few_shot: 10
+        metrics:
+          - type: acc_norm
+            value: 43.50
+            name: normalized accuracy
+        source:
+          url: https://github.com/nlp-uoregon/mlmm-evaluation
+          name: Evaluation Framework for Multilingual Large Language Models
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: TruthfulQA (PT)
+          type: truthfulqa_pt
+          args:
+            num_few_shot: 0
+        metrics:
+          - type: mc2
+            value: 41.14
+            name: bleurt
+        source:
+          url: https://github.com/nlp-uoregon/mlmm-evaluation
+          name: Evaluation Framework for Multilingual Large Language Models
+      - task:
+          type: text-generation
+          name: Text Generation
+        dataset:
+          name: Alpaca-Eval (PT)
+          type: alpaca_eval_pt
+          args:
+            num_few_shot: 0
+        metrics:
+          - type: lc_winrate
+            value: 8.80
+            name: length controlled winrate
+        source:
+          url: https://github.com/tatsu-lab/alpaca_eval
+          name: AlpacaEval
 base_model:
-- TucanoBR/Tucano-1b1
+  - TucanoBR/Tucano-1b1
 ---
+
 # Tucano-1b1-Instruct
 
 <img src="./logo.png" alt="An illustration of a Tucano bird showing vibrant colors like yellow, orange, blue, green, and black." height="200">
@@ -368,7 +369,7 @@ generation_config = GenerationConfig(
     "temperature": 0.1,
     "top_k": 50,
     "top_p": 1.0,
-    "use_cache": True, 
+    "use_cache": True,
   }
 )
 
@@ -401,27 +402,38 @@ Hence, even though our models are released with a permissive license, we urge us
 
 To evaluate the `Instruct` versions of our models, we used [AlpacaEval](https://github.com/tatsu-lab/alpaca_eval) 2.0 with length-controlled win rates, a fast and relatively cheap evaluation method that is highly correlated with human preferences and evaluations of pairwise comparisons. To learn more about our evaluation read [our documentation](https://github.com/Nkluge-correa/Tucano/blob/main/evaluations/README.md).
 
-|                         | Avg. Length | Wins | Base Wins | Total Matches | Length-Controlled Win Rate (%) | LC Std. Error |
-|-------------------------|-------------|------|-----------|---------------|--------------------------------|---------------|
-| Llama-3.2-3B-Instruct   | 1609        | 257  | 548       | 805           | 21.06                          | 0.075         |
-| **Tucano-2b4-Instruct** | 1843        | 151  | 654       | 805           | 13.00                          | 0.071         |
-| **Tucano-1b1-Instruct** | 1667        | 124  | 681       | 805           | 8.80                           | 0.083         |
-| Llama-3.2-1B-Instruct   | 1429        | 99   | 706       | 805           | 7.15                           | 0.057         |
-| TeenyTinyLlama-460m-Chat| 1333        | 28   | 777       | 805           | 2.84                           | 0.059         |
-| Sabiá-7b                | 5011        | 1    | 804       | 805           | 0.076                          | 0.0043        |
-| Gervásio-7b             | 5740        | 1    | 804       | 805           | 0.026                          | 0.0016        |
+|                          | Avg. Length | Wins | Base Wins | Total Matches | Length-Controlled Win Rate (%) | LC Std. Error |
+| ------------------------ | ----------- | ---- | --------- | ------------- | ------------------------------ | ------------- |
+| Llama-3.2-3B-Instruct    | 1609        | 257  | 548       | 805           | 21.06                          | 0.075         |
+| **Tucano-2b4-Instruct**  | 1843        | 151  | 654       | 805           | 13.00                          | 0.071         |
+| **Tucano-1b1-Instruct**  | 1667        | 124  | 681       | 805           | 8.80                           | 0.083         |
+| Llama-3.2-1B-Instruct    | 1429        | 99   | 706       | 805           | 7.15                           | 0.057         |
+| TeenyTinyLlama-460m-Chat | 1333        | 28   | 777       | 805           | 2.84                           | 0.059         |
+| Sabiá-7b                 | 5011        | 1    | 804       | 805           | 0.076                          | 0.0043        |
+| Gervásio-7b              | 5740        | 1    | 804       | 805           | 0.026                          | 0.0016        |
 
 ## Cite as 🤗
 
 ```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 ```
 

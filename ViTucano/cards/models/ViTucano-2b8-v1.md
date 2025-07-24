@@ -1,24 +1,25 @@
 ---
 language:
-- pt
+  - pt
 datasets:
-- TucanoBR/GigaVerbo
-- TucanoBR/ViTucano-Pretrain
-- TucanoBR/ViTucano-SFT
+  - TucanoBR/GigaVerbo
+  - TucanoBR/ViTucano-Pretrain
+  - TucanoBR/ViTucano-SFT
 pipeline_tag: image-text-to-text
 license: apache-2.0
 tags:
-- vision
-- image-text-to-text
+  - vision
+  - image-text-to-text
 library_name: transformers
 base_model:
-- TucanoBR/Tucano-2b4
+  - TucanoBR/Tucano-2b4
 co2_eq_emissions:
   emissions: 25460
   source: CodeCarbon
   geographical_location: Germany
   hardware_used: NVIDIA A40
 ---
+
 # ViTucano-2b8-v1
 
 <img src="../../img/ViTucano-logo.png" alt="Uma ilustração de um tucano usando um elegante terno. O tucano está olhando para o lado, o que mostra o monóculo em seu olho direito." height="200">
@@ -40,7 +41,7 @@ co2_eq_emissions:
 - **Language:** Portuguese
 - **GPU:** 8 NVIDIA A40
 - **Training time**: ~ 27 hours
-- **Emissions:**  25.4 KgCO2 (Germany)
+- **Emissions:** 25.4 KgCO2 (Germany)
 - **Total energy consumption:** 66 kWh
 
 This repository has the [source code](https://github.com/Nkluge-correa/TinyLLaVA_Factory) used to train this model.
@@ -87,6 +88,7 @@ args = type('Args', (), {
 
 eval_model(args)
 ```
+
 </details>
 
 <details>
@@ -100,7 +102,7 @@ model_path = "TucanoBR/ViTucano-2b8-v1"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = AutoModelForCausalLM.from_pretrained(
-  model_path, 
+  model_path,
   #torch_dtype=torch.bfloat16, # for optimized inference  🚀
   #attn_implementation="flash_attention_2" # for optimized inference  🚀
   trust_remote_code=True)
@@ -113,6 +115,7 @@ output_text, _ = model.chat(prompt=prompt, image=image_file, tokenizer=tokenizer
 
 print(output_text)
 ```
+
 </details>
 
 ## Limitations
@@ -150,13 +153,24 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 ```
 
@@ -175,7 +189,7 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ```bibtex
 @misc{liu2023llava,
-      title={Visual Instruction Tuning}, 
+      title={Visual Instruction Tuning},
       author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
       publisher={NeurIPS},
       year={2023},

@@ -1,40 +1,40 @@
 ---
 dataset_info:
   features:
-  - name: text
-    dtype: string
-  - name: label
-    dtype: int64
-    class_label:
+    - name: text
+      dtype: string
+    - name: label
+      dtype: int64
+      class_label:
         names:
-          '0': low
-          '1': high
-  - name: probs
-    dtype: float64    
-  - name: metadata
-    dtype: string
+          "0": low
+          "1": high
+    - name: probs
+      dtype: float64
+    - name: metadata
+      dtype: string
   splits:
-  - name: train
-    num_bytes: 786084805068
-    num_examples: 145300844
+    - name: train
+      num_bytes: 786084805068
+      num_examples: 145300844
   download_size: 411184278869
   dataset_size: 786084805068
 configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data/train-*
+  - config_name: default
+    data_files:
+      - split: train
+        path: data/train-*
 license: other
 task_categories:
-- text-generation
+  - text-generation
 language:
-- pt
+  - pt
 tags:
-- portuguese
-- language-modeling
+  - portuguese
+  - language-modeling
 pretty_name: GigaVerbo
 size_categories:
-- 100M<n<1B
+  - 100M<n<1B
 ---
 
 # GigaVerbo: a 780 GB Dataset of Portuguese Text
@@ -138,7 +138,7 @@ GigaVerbo has been deduplicated with an [exact hash deduplication filter](https:
 A class label distribution of the samples in GigaVerbo can be found in the table below:
 
 | Subset          | Original Size   | High           | Low            |
-|-----------------|-----------------|----------------|----------------|
+| --------------- | --------------- | -------------- | -------------- |
 | monoHPLT-PT     | 58,244,012      | 33,650,933     | 24,593,079     |
 | CrawlPT         | 43,846,974      | 27,498,861     | 16,348,113     |
 | Multilingual-C4 | 16,092,571      | 13,440,818     | 2,651,753      |
@@ -245,13 +245,24 @@ The following datasets and respective licenses from GigaVerbo (only training spl
 ```bibtex
 
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 
 ```

@@ -2,6 +2,9 @@
   
 # Tucano: Advancing Neural Text Generation for Portuguese
 
+<a href="https://doi.org/10.1016/j.patter.2025.101325" target="_blank">
+    <img src="https://img.shields.io/badge/Patterns-10.1016/j.patter.2025.101325-blue" alt="Patterns">
+</a><br>
 <a href="https://arxiv.org/abs/2411.07854" target="_blank">
     <img src="https://img.shields.io/badge/arXiv-2411.07854-009C3B.svg" alt="arXiv">
 </a>
@@ -24,6 +27,7 @@ To stimulate the future of open development of neural text generation in Portugu
 
 ## News 🚀
 
+- [24/07/2025] Peer-reviewed article "[Tucano: Advancing Neural Text Generation for Portuguese](https://doi.org/10.1016/j.patter.2025.101325)" is published in Patterns, with all models and datasets released on [Hugging Face](https://huggingface.co/TucanoBR).
 - [13/01/2025] We release ViTucano, a pair of vision assistants natively pretrained in Portuguese ([ViTucano-1b5-v1](https://huggingface.co/TucanoBR/ViTucano-1b5-v1), [ViTucano-2b8-v1](https://huggingface.co/TucanoBR/ViTucano-2b8-v1)).
 - [13/01/2025] We release the datasets used to pretrain and fine-tune the ViTucano models: [ViTucano-Pretrain](https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain) and [ViTucano-SFT](https://huggingface.co/datasets/TucanoBR/ViTucano-SFT).
 - [29/11/2024] Tucano is mentioned on Deutsche Welle: "[Cientistas criam maior banco de dados em português para IA](https://www.dw.com/pt-br/pesquisadores-da-alemanha-criam-maior-banco-de-dados-p%C3%BAblico-em-portugu%C3%AAs-para-ia/a-70917082)".
@@ -126,13 +130,24 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
-      author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-      year={2024},
-      eprint={2411.07854},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    year={2024},
+    eprint={2411.07854},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL},
+    url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 ```
 

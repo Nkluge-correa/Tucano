@@ -40,15 +40,15 @@ Given that our study was performed in the [Marvin cluster](https://www.hpc.uni-b
 To train the projector (i.e., feature alignment), we used the [ViTucano-Pretrain](https://huggingface.co/datasets/TucanoBR/ViTucano-Pretrain) dataset. This dataset is a translation of the original [liuhaotian/LLaVA-Pretrain](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain), obtained via Google's translation API. LLaVA Visual Instruct Pretrain LCS-558K is a subset of the LAION/CC/SBU dataset, filtered with a more balanced concept coverage distribution.
 
 | Hyperparameters | Global Batch Size | Learning rate | Epochs | Weight decay |
-|-----------------|-------------------|---------------|--------|--------------|
-|                 | 256               | 1e-3          | 1      |  0           |
+| --------------- | ----------------- | ------------- | ------ | ------------ |
+|                 | 256               | 1e-3          | 1      | 0            |
 
 ### Visual Instruction Tuning Corpus (ViTucano-SFT)
 
 For visual instruction tuning, we used samples from the original [llava_v1_5_mix665k.json](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_v1_5_mix665k.json) dataset. More specifically, only the samples from the `coco` and `gqa` partitions are needed. These samples were then translated into Portuguese using Google's translation API. The original dataset ([LLaVA Visual Instruct 150K](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K)) was created by prompting GPT-4-0314 API. We also added samples (i.e., the entire train portion) from the [COCO Captions Portuguese Translation](https://huggingface.co/datasets/laicsiifes/coco-captions-pt-br). This concatenation is available in [TucanoBR/ViTucano-SFT](https://huggingface.co/datasets/TucanoBR/ViTucano-SFT).
 
 | Hyperparameters | Global Batch Size | Learning rate | Epochs | Weight decay |
-|-----------------|-------------------|---------------|--------|--------------|
+| --------------- | ----------------- | ------------- | ------ | ------------ |
 |                 | 128               | 2e-5          | 4      | 0            |
 
 ## Basic usage
@@ -81,6 +81,7 @@ args = type('Args', (), {
 
 eval_model(args)
 ```
+
 </details>
 
 <details>
@@ -94,7 +95,7 @@ model_path = "TucanoBR/ViTucano-2b8-v1"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = AutoModelForCausalLM.from_pretrained(
-  model_path, 
+  model_path,
   #torch_dtype=torch.bfloat16, # for optimized inference  🚀
   #attn_implementation="flash_attention_2" # for optimized inference  🚀
   trust_remote_code=True)
@@ -107,6 +108,7 @@ output_text, _ = model.chat(prompt=prompt, image=image_file, tokenizer=tokenizer
 
 print(output_text)
 ```
+
 </details>
 
 ## Intended Uses
@@ -156,13 +158,24 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ```bibtex
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 ```
 
@@ -181,7 +194,7 @@ Hence, even though our models are released with a permissive license, we urge us
 
 ```bibtex
 @misc{liu2023llava,
-      title={Visual Instruction Tuning}, 
+      title={Visual Instruction Tuning},
       author={Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
       publisher={NeurIPS},
       year={2023},

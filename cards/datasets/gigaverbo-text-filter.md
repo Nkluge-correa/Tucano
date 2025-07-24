@@ -1,36 +1,36 @@
 ---
 dataset_info:
   features:
-  - name: text
-    dtype: string
-  - name: score
-    dtype: float64
-  - name: embedding
-    sequence: float64
-  - name: dataset
-    dtype: string
+    - name: text
+      dtype: string
+    - name: score
+      dtype: float64
+    - name: embedding
+      sequence: float64
+    - name: dataset
+      dtype: string
   splits:
-  - name: train
-    num_bytes: 1199742546
-    num_examples: 110000
+    - name: train
+      num_bytes: 1199742546
+      num_examples: 110000
   download_size: 856443525
   dataset_size: 1199742546
 configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data/train-*
+  - config_name: default
+    data_files:
+      - split: train
+        path: data/train-*
 license: apache-2.0
 task_categories:
-- text-classification
+  - text-classification
 language:
-- pt
+  - pt
 tags:
-- portuguese
-- language-modeling
+  - portuguese
+  - language-modeling
 pretty_name: GigaVerbo Text-Filter
 size_categories:
-- 100K<n<1M
+  - 100K<n<1M
 ---
 
 # GigaVerbo Text-Filter
@@ -206,13 +206,24 @@ The following datasets and respective licenses from GigaVerbo (only training spl
 ```bibtex
 
 @misc{correa2024tucanoadvancingneuraltext,
-      title={{Tucano: Advancing Neural Text Generation for Portuguese}}, 
+      title={{Tucano: Advancing Neural Text Generation for Portuguese}},
       author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
       year={2024},
       eprint={2411.07854},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2411.07854}, 
+      url={https://arxiv.org/abs/2411.07854},
+}
+
+@article{correa2025tucanoadvancingneuraltext,
+    title={{Tucano: Advancing Neural Text Generation for Portuguese}},
+    author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
+    journal={Patterns},
+    publisher={Elsevier},
+    year={2025},
+    doi={10.1016/j.patter.2025.101325},
+    url={https://doi.org/10.1016/j.patter.2025.101325},
+    issn={2666-3899}
 }
 
 ```
