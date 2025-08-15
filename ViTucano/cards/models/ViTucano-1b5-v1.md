@@ -141,7 +141,7 @@ Hence, even though our models are released with a permissive license, we urge us
 ```bibtex
 @misc{correa2025vitucano,
     author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-    title={{ViTucano: A Portuguese Vision Assitant}},
+    title={{ViTucano: A Portuguese Vision Assistant}},
     year=2025,
     howpublished={\url{https://huggingface.co/TucanoBR/ViTucano-2b8-v1}},
     doi={10.57967/hf/4530},

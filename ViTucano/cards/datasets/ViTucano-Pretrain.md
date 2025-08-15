@@ -171,7 +171,7 @@ Creative Commons Attribution 4.0 International; and it should abide by the [poli
 ```bibtex
 @misc{correa2025vitucano,
     author={Corr{\^e}a, Nicholas Kluge and Sen, Aniket and Falk, Sophia and Fatimah, Shiza},
-    title={{ViTucano: A Portuguese Vision Assitant}},
+    title={{ViTucano: A Portuguese Vision Assistant}},
     year=2025,
     howpublished={\url{https://huggingface.co/TucanoBR/ViTucano-2b8-v1}},
     doi={10.57967/hf/4530},
