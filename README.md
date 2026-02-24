@@ -23,6 +23,8 @@
         <img src="./img/logo.png" alt="An illustration of a Tucano bird showing vibrant colors like yellow, orange, blue, green, and black." height="400">
 </p>
 
+**THIS PROJECT IS ARCHIVED. TO SEE THE EVOLUTION OF TUCANO, CHECK THE POLYGL0T PROJECT: https://github.com/Polygl0t**
+
 To stimulate the future of open development of neural text generation in Portuguese, we present both **GigaVerbo**, a concatenation of deduplicated Portuguese text corpora amounting to 200 billion tokens, and **Tucano**, a series of decoder-transformers natively pre-trained in Portuguese. All byproducts of our study, including the source code used for training and evaluation, are openly released on GitHub and Hugging Face.
 
 ## News 🚀
